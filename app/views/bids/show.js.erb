@@ -1,0 +1,6 @@
+$('#betsList').html("<%=j render partial: "bets/list" %>");
+
+$("#nbids ").html(<%=@bid.nbids%>);
+$("#leftnbids ").html(<%=@bid.leftbids%>);
+$("#nbids").effect( "highlight","slow");
+$("#leftnbids").effect( "highlight","slow");	

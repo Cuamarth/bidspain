@@ -1,0 +1,21 @@
+<table>
+	<%	
+		i=0;
+		if (@page and @page.to_i>1) then 
+			i=20*(@page-1);
+		end	
+		@bets.each do |bet|
+	%>
+		<tr class='<%=("row-"+i.to_s) if (i<3 and (@page==nil or @page==1 or @page==0))%>  <%="userOwnBid" if (@User!=nil and bet.user.id==@User.id) %>  <%="lastBid" if bet.created_at>5.seconds.ago%>'>
+			<td class="bet_id"><%=i+=1%></td>
+			<td class="bet_status"><%=simple_format(bet.status_html)%></td>
+			<td class="bet_place"><%=image_tag "flags/#{bet.user.country}.png"%><span> ( <%=bet.user.state %> )</span></td>						
+			<td class="bet_username"><%=bet.user.username%></td>
+			<td class="bet_quantity"><%=if @User!=nil and bet.user.id==@User.id then bet.quantity else "##.##"end %></td>
+		</tr>
+	<%end%>
+	
+</table>
+<%=paginate @bets, :remote => true%>
+
+<a id="reload" data-remote="true" href="?page=<%=@page.to_i%>"class="hide">reload</a>

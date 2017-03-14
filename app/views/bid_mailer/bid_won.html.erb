@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+  	<%=render partial: "emailer/email_header"%>
+    <h2><%=I18n.t "bidspain.mail.bidwon1"%> <%=@user.fullName%>  !</h2>
+    <table >
+    	<tr>
+    		<td>
+    			<img src="<%=@bid.product.image_url.url(:main)%>"/>
+    		</td>
+    		<td>
+    			<%=I18n.t "bidspain.mail.bidwon2"%> <%= @bid.product.title %> <%=I18n.t "bidspain.mail.bidwon3"%> <%=@url%> <%=I18n.t "bidspain.mail.bidwon4"%>.   			
+    		</td>
+    	</tr>
+    	
+    </table>
+  </body>
+</html>

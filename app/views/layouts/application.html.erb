@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Bidspain - <%=if @title then @title else I18n.t "bidspain.bids.header.title" end %></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <!–[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]–>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+  <meta name="Description" content="<%=I18n.t "bidspain.bids.header.htmldescription"%>">
+
+</head>
+<body id="main" class="<%="responsive" if !has_desktop_preference%>">
+<div id="out-wrapper">
+	<div id="headerContainer">
+					
+		<div id ="header" class="out-container " >
+			<div class="border-left"></div>
+			<div id="header-central" class="container shardBG">
+				<div id ="logo">
+					<a href="/" ><img  alt="BidSpain" src="/img/logo.png" ></a>
+					<h1><%=I18n.t "bidspain.bids.header.htmltitle"%>  </h1>
+					<h2><%=I18n.t "bidspain.bids.header.htmltitle2"%></h2>
+				</div>
+				<div id ="header-content">
+					<div id="header-top-links">
+						<ul class="horizontal">							
+						<li id="languageSelector">
+							<a id="spanishLanguage" href="?locale=es">								
+								<%= image_tag "theme/header/Spain.png"  %>								
+							</a>
+																					
+
+							<a id="englishLanguage" href="?locale=en">								
+								<%= image_tag "theme/header/UnitedKingdom.png" %>		
+							</a>													
+						</li>
+							<%=if @User and @User.id  then (render partial: "session/logged") else (render partial: "session/not_logged") end %>							
+							
+					
+
+						</ul>
+					</div>
+					<div id="header-bottom-links">
+						<ul  id ="socialList" class="horizontal">
+							<li>
+								<a target="_blank" href="https://plus.google.com/b/108673501467819420497/" >
+									<%= image_tag "theme/wrapper/google.png",:alt=>"Bidspain en Google+",height: "24", width:"24" %>					
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://twitter.com/BidSpain">
+									<%= image_tag "theme/wrapper/twitter.png",:alt=>"Bidspain en twitter",height: "24", width:"24" %>					
+								</a>
+							</li>
+							<li>
+								<a target="_blank" href="https://www.facebook.com/bidspainweb" >
+									<%= image_tag "theme/wrapper/FB.png",:alt=>"Bidspain en Facebook",height: "24", width:"24" %>					
+								</a>
+							</li>
+							<li>
+								<a  target="_blank" href="https://www.tuenti.com/#m=Page&func=index&id=2258363305" >
+									<%= image_tag "theme/wrapper/tuenti.png",:alt=>"Bidspain en  Tuenti",height: "24", width:"24" %>				
+								</a>
+							</li>								
+						</ul>
+						<ul id="secureList" class="horizontal">
+							<li id="secureDispatch"><span><%=I18n.t "bidspain.bids.header.securedelivery"%></span></li>
+							<li id="secureMoney" ><span><%=I18n.t "bidspain.bids.header.paypalverified"%></span></li>
+							<li id="secureGeneral"><span><%=I18n.t "bidspain.bids.header.securepay"%></span></li>
+						</ul>
+
+					</div>
+				</div>	
+			</div>
+			<div class="border-right"></div>	
+		</div>	
+		
+	</div>	
+	<div id="wrapper" class="out-container" >
+		<div id="wrapper-container">
+			<div id="wrapper-left"></div>
+			<div id="wrapper-content" class="container">
+				<!--[if lte IE 8]> <div id="ie8"> <![endif]--> 
+				
+					<%= yield %>
+				<!--[if lte IE 8]> </div> <![endif]--> 
+			</div>
+			<div id="wrapper-right"></div>
+		</div>
+	</div>
+	<div id="footerContainer">
+					
+		<div id ="footer" class="out-container " >
+			<div class="border-left"></div>
+			<div id="footer-central" class="container shardBG">
+				
+				<ul class="horizontal">
+					<li><a href="/instrucciones"><%=I18n.t "bidspain.bids.footer.howtopay"%> </a></li>
+					<li><a href="/quienes-somos"><%=I18n.t "bidspain.bids.footer.whoweare"%> </a></li>
+					<li><a href="mailto:info@bidspain.com">info@bidspain.com</a></li>
+					<li><a href="/docs/Terminos y Condiciones.pdf"><%=I18n.t "bidspain.bids.footer.termsandcoditions"%> </a></li>
+					<li><a href="/docs/Politica de Privacidad.pdf"><%=I18n.t "bidspain.bids.footer.privacypolicy"%> </a></li>
+					<li>				
+						<a href="https://www.paypal.com/es/webapps/mpp/paypal-popup" title="Cómo funciona PayPal" onclick="javascript:window.open('https://www.paypal.com/es/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;"><img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg" border="0" alt="PayPal Logo"></a>
+						<%= image_tag "theme/wrapper/visafooter.png",:alt=>"Contador",:title => "Contador" %>
+					</li>	
+				</ul>	
+				<p class="centered row-100">
+					<a id="gotoDesktop" href="" title="Ir a la versión de escritorio" class='<%="hide" if has_desktop_preference%>'><%=I18n.t "bidspain.bids.footer.gotodesktopversion"%> </a>
+					<a id="gotoMovileVersion" href="" title="Ir a la versión movil" class='<%="hide" if !has_desktop_preference%>'> <%=I18n.t "bidspain.bids.footer.gotomobileversion"%> </a>
+				</p>
+			
+			</div>
+			<div class="border-right"></div>	
+		</div>	
+		
+	</div>	
+
+</div>
+<div id="CookieAdvice" class="hide">
+	
+	<p> <%=I18n.t "bidspain.bids.footer.cookiesadvise1"%>  <a class="mailLink" href="/docs/Politica de Privacidad.pdf"><%=I18n.t "bidspain.bids.footer.privacypolicy"%></a>.</p> 
+	<p><%=I18n.t "bidspain.bids.footer.cookiesadvise2"%></p> <p><a class="close mailLink" href="#"><%=I18n.t "bidspain.common.close"%></a></p>						
+  
+</div>
+</body>
+</html>

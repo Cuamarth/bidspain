@@ -1,0 +1,40 @@
+
+<li>
+	<a class="instrucciones" href="/instrucciones">
+		<span><%=I18n.t "bidspain.bids.header.instructions"%> </span>
+		<%= image_tag "theme/header/info.png",:alt=> (I18n.t "bidspain.bids.header.instructions") %>		
+	</a>		
+							
+</li>
+<li  class="bidSpark">
+		<a id="userMoney" href="/user/wallet"><%=number_to_currency(@User.money)%></a>
+</li>
+<%if has_pending_bids%>
+	<li id="trophy" class="continousSpark" title="<%=I18n.t "bidspain.bids.header.winnedbidalert"%>">
+		<a href="/user/bids"><%= image_tag "theme/header/whitetrophy.png" %>		</a>
+	</li>
+<%end%>
+<li id="freeBidsUpperCount" class="bidSpark" title="<%=I18n.t "bidspain.bids.header.freebidsdescriptions"%>">
+		<div class="redCounter">
+			<%=@User.freebids%>
+		</div>
+</li>
+<li id="halfBidsUpperCount" class="bidSpark" title="<%=I18n.t "bidspain.bids.header.halfbidsdescriptions"%>">
+		<div class="redCounter">
+			<%=@User.halfbids%>
+		</div>
+</li>
+<li id="userLink" >
+	<a href="/user"><%=(@User.fullName.length>20 ? @User.fullName[0..20]+"...":@User.fullName) %></a>			
+	<div id="userTopMenu" class="hide">		
+		<div id="menu-sup"></div>
+		<div class="menu_container">
+			<ul id="userTopMenuLinks">
+				<%=render partial: "users/user_section_links"%>
+			</ul>
+		</div>
+	</div>					
+</li>
+<li>
+	<a href="/logout"><%=I18n.t "bidspain.common.exit"%></a>								
+</li>

@@ -1,0 +1,167 @@
+<%timeLeft=@bid.getRemainingTime%>
+
+<div id="left_bid_container" class="bidDetails">
+	<div id="bid_action_container">
+		
+		<ul id="time_container" class="time horizontal" data-id="<%=@bid.id%>">
+			<%if !@bid.closed then %>
+			<li class="hours" ><span><%=timeLeft.hours%></span> h</li>
+			<li class="minutes" ><span><%=timeLeft.minutes%></span> m</li>
+			<li class="seconds" ><span><%=timeLeft.seconds%></span> s</li>
+			<%else%>
+				<p class="closed"><%=I18n.t "bidspain.common.closed"%></p>
+			<%end%>
+		</ul>
+		<%if !@bid.closed then %>
+		<div id="bidSelector" data-max="<%=@bid.maxbid%>">
+			<ul class=" horizontal">
+				<li class="arrowElement"><a href="#" class="previous bidMove"><%= image_tag "theme/wrapper/leftArrow.png"%></a></li>
+				<li class="dotted"><a href="" class="value"><%=sprintf("%05.2f",(@bid.maxbid-0.05))%></a></li>
+				<li class="dotted"><a href="" class="value"><%=sprintf("%05.2f",(@bid.maxbid-0.04))%></a></li>
+				<li class="dotted"><a href="" class="value"><%=sprintf("%05.2f",(@bid.maxbid-0.03))%></a></li>
+				<li class="dotted"><a href="" class="value"><%=sprintf("%05.2f",(@bid.maxbid-0.02))%></a></li>
+				<li class="dotted"><a href="" class="value"><%=sprintf("%05.2f",(@bid.maxbid-0.01))%></a></li>
+				<li><a href="" class="value"><%=sprintf("%05.2f",@bid.maxbid)%></a></li>
+				<li class="arrowElement"><a href="#" class="next bidMove"><%= image_tag "theme/wrapper/rightArrow.png"%></a></li>			
+			</ul>
+		</div>
+		<div id="errorBox" class="alertBox row-100 hide">
+			<p> </p><a href="">X</a>
+		</div>
+		<div id="successBox" class="alertBox row-100 hide">
+			<p> </p><a href="">X</a>
+		</div>
+		<div id="warningBox" class="alertBox row-100 hide">
+			<p> </p><a href="">X</a>
+		</div>
+		<div id="invalidBox" class="alertBox row-100 hide">
+			<p> </p><a href="">X</a>
+		</div>
+		<div id="infoBox" class=" row-100 ">
+			<p> <%= image_tag "theme/info/info.png"%> <%=I18n.t "bidspain.bids.bidtip"%></p>
+		</div>
+		<div id="actionBox"  class="row-100">
+			<div id="MaxPrice">
+				Max <%=@bid.maxbid%> €
+			</div>
+			<form id="InputMoneyContainer">
+				<input id="set_bid_id" name="bet[bid_id]" type="hidden" value="<%=@bid.id%>"/>
+				<input id="set_freebid" name="bet[freebid]" type="hidden" value="false" autocomplete="off"/>
+				<input id="set_halfbid" name="bet[halfbid]" type="hidden" value="false" autocomplete="off"/>
+				
+				<div class="inputMoney">
+					<label><%=I18n.t "bidspain.bids.euros"%></label> 
+					<input id="eurosBid" name="bet[euros]" type="text" size="2" maxlength="3" value="0"/>
+				</div>
+				<div class="inputMoney">
+					<label><%=I18n.t "bidspain.bids.cents"%></label> 
+					<input id="centsBid"  name="bet[cents]" type="text" size="2" maxlength="2" value="00"/>
+				</div>
+			</form>
+			<div id="bidButtonContainer" class="shardBG">
+				<a href="#"><%=I18n.t "bidspain.common.bet"%></a>
+			</div>
+		</div>
+		<%end%>
+		<div id="betsList" class="row-100">
+			   <%= render partial: "bets/list"%>	
+			   
+			   
+		</div>
+
+	</div>
+
+
+</div>
+<div id="right_bid_container" class="bidDetails">
+	<div id="actualBidInfo" class="shardBG">
+		<div class="bidInfoItem">
+			<p><%=I18n.t "bidspain.bids.betsdone"%></p>
+			<p id="nbids" class="dataNumber bidSpark"><%=@bid.nbids%></p>
+		</div>
+		<div class="bidInfoItem">
+			<p><%=I18n.t "bidspain.bids.betsleft"%></p>
+			<p id="leftnbids" class="dataNumber bidSpark"><%=@bid.leftbids%></p>
+		</div>
+		<div class="bidInfoItem" id="PrecioPuja">
+			<p><%=I18n.t "bidspain.bids.betcost"%></p>
+			<p class="dataNumber"><%=@bid.cost_per_bid %> €</p>
+		</div>	
+		<%if @User  and !@bid.closed then%>
+			<div id="InfoBidsUser">
+				<div class="userBidsPre"><p><%=I18n.t "bidspain.common.use"%></p></div>
+				<div class="userBids">
+					<p>
+						<a href="#" data-id="set_freebid"  class="bidCheck ">
+							<%= image_tag "theme/wrapper/checkDisabled.png",:alt=>"Activa tus  pujas gratis"%>
+							<%= image_tag "theme/wrapper/checkOn.png",:alt=>"Desactiva tus pujas gratis",:class=>"hide"%>	
+						</a>
+						
+						<%=I18n.t "bidspain.bids.freebids"%> <span id="freeBidsCount" class="bidSpark">(<%=@User.freebids%>)</span>
+					</p>
+				</div>
+				<div class="userBids">
+					<p>
+						<a href="#" data-id="set_halfbid" class="bidCheck">
+							<%= image_tag "theme/wrapper/checkDisabled.png",:alt=>"Activa tus pujas al 50% de descuento"%>
+							<%= image_tag "theme/wrapper/checkOn.png",:alt=>"Desactiva tus pujas al 50% de descuento",:class=>"hide"%>
+						</a>
+
+						<%=I18n.t "bidspain.bids.halfbids"%><span id="halfBidsCount" class="bidSpark">(<%=@User.halfbids%>)</span>
+					</p>
+				</div>
+			</div>
+		<%end%>	
+	</div>
+	<div id="product_description" >
+		<h1><%=@bid.product.localicedTitle%></h1>
+		<ul id="bidSocialShare" class="horizontal">
+			<li>
+				<a target="_blank" href="https://plus.google.com/share?url=<%=@bid.shareurl%>" >
+					<%= image_tag "theme/wrapper/google.png"%> 					
+				</a>
+			</li>			
+			<li>
+				<a target="_blank" href="http://www.facebook.com/sharer.php?u=<%=@bid.shareurl%>" >
+					<%= image_tag "theme/wrapper/FB.png" %>					
+				</a>
+			</li>
+			<li>
+				<a target="_blank" href='http://twitter.com/share?url=<%=@bid.shareurl%>&text=<%=I18n.t "bidspain.bids.betfor"%> <%=@bid.product.localicedTitle%> <%=I18n.t "bidspain.common.in"%> <%=@bid.shareurl%>' >
+					<%= image_tag "theme/wrapper/twitter.png" %>					
+				</a>
+			</li>	
+			<li>
+				<a href="http://www.tuenti.com/share?url=<%=@bid.shareurl%>" >
+					<%= image_tag "theme/wrapper/tuenti.png",height: "28", width:"28" %>					
+				</a>
+			</li>	
+		</ul>
+		<div class="product_section_container img_container row-100">
+			<a href="<%=@bid.product.image_url.url%>" class="fancyImage"><%= image_tag("#{@bid.product.image_url.url(:bidView)}")%></a>
+		</div>
+		<div class="product_section_container  row-100">
+				<h3> <%=I18n.t "bidspain.bids.valuebidspaincredits"%>: <%=@bid.price%> €	</h3>	
+		</div>
+		<div class="product_section_container">
+			<%=simple_format(@bid.product.localicedDescription[0..600]) %>
+			<p class="readMore"><a href="#fullDescription" class="fancyText"> <%=I18n.t "bidspain.bids.readmore"%></a></p>
+			<div id="fullDescription" style="display:none"><%=simple_format(@bid.product.localicedDescription) %></div>
+		</div>
+		<% if @recentBids.any?%>
+		<div class="product_section_container lastWinners">
+			<h3><%= image_tag "theme/wrapper/trophy.png" %> <%=I18n.t "bidspain.bids.lastwinners"%></h3>	
+			 <ul>
+				<% @recentBids.each do |rbid| %>
+					<li><%=getUserNameFromId(rbid.userwiner)%></li>				
+				<% end %>
+
+			</ul>
+		</div>
+		<%end%>
+	</div>
+	
+
+</div>
+
+

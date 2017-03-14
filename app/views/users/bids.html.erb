@@ -1,0 +1,61 @@
+<div id="UserWrapper">
+	<%=render partial: "user_section"%>
+	
+
+	<div id="detailsSection" >
+
+		<div class="detailsContainer ">
+				<div class="alertBox row-100 hide" id="successBox">
+					<p></p>					
+				</div>
+				<div class="alertBox row-100 hide" id="warningBox">
+					<p></p>					
+				</div>
+				<%if @pendingPayBids.any?%>
+					<h2><%=I18n.t "bidspain.bids.actualbids"%> </h2>
+					
+						<% @pendingPayBids.each_slice(2)  do |rowBids| %>
+							<div class="row-100 hist_bids_row">
+								<%rowBids.each do |bid|%>
+								<div class="historyBidBox">
+									<p><%=bid.endingTime.to_formatted_s(:short)%></p>
+									<div class="bidBox" style='background:url("<%=bid.product.image_url.url(:mainprincipal)%>") no-repeat center center'">	
+											<div class="buttonContainer">
+									
+											<%if bid.paid and bid.userconfirmed%>
+												<a id="payedBid" class="formButton payButton " href="#payedBid"><%=I18n.t "bidspain.common.payed"%> </a>
+											<%elsif bid.paid%>											
+												<a  class="formButton confirmButton" href="/user/confirmbid/<%=bid.id%>/product"><%=I18n.t "bidspain.bids.requestproduct"%></a>
+												<a  class="formButton confirmButton" href="/user/confirmbid/<%=bid.id%>/money"><%=I18n.t "bidspain.bids.choosebidspaincredits"%></a>
+											<%else%>
+												<a  class="formButton payBid payButton" href="/user/paybid/<%=bid.id%>"><%=I18n.t "bidspain.common.pay"%></a>
+											<%end%>
+											</div>
+											<span class="bidQuantity"><%=number_to_currency(bid.winnerquantity)%></span>
+									</div>
+								</div>
+								<%end%>
+							</div>
+						<%end%>
+				<%end%>
+				
+				
+					<h2><%=I18n.t "bidspain.bids.bidshistory"%>
+							<%= image_tag "theme/wrapper/help_icon.png",:alt=>(I18n.t "bidspain.bids.bidshistorytip"),:title => (I18n.t "bidspain.bids.bidshistorytip"),:class =>"smallIcon" %>	
+					</h2> 
+					<% @historyBets.each_slice(2)  do |rowBids| %>
+						<div class="row-100 hist_bids_row">
+							<%rowBids.each do |bet|%>
+							<div class="historyBidBox">
+								<p><%=bet.historicalbid.endingTime.to_formatted_s(:short)%></p>
+								<div class="bidBox" style='background:url("<%=bet.historicalbid.medium_image_url%>") no-repeat center center'">	
+								
+										<span class='bidPosition <%="firstPosition" if bet.position==1 %>'><%=bet.position%></span>
+								</div>
+							</div>
+							<%end%>
+						</div>
+					<%end%>
+		</div>	
+	</div>
+</div>

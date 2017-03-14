@@ -1,0 +1,107 @@
+<%= form_for @User,url: "/user" do |f| %>
+
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.mailaddress"%> :</label>
+	<div class="form_row_value">
+		<span class="value"><%=@User.mail%> </span>
+		<%= f.text_field :mail,:size =>"30",:class =>"value hide" %>
+		<%if @User.errors[:mail]%>
+			<p class="inline-errors value hide"> <%=@User.errors[:mail][0]%></p>
+		<%end%>		
+	</div>
+</div>
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.name"%> :</label>
+	<div class="form_row_value">
+		<span class="value"><%=@User.name%> </span>
+		<%= f.text_field :name,:size =>"30",:class =>"value hide" %>
+		<%if @User.errors[:name]%>
+			<p class="inline-errors value hide"> <%=@User.errors[:name][0]%></p>
+		<%end%>		
+	</div>
+</div>
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.lastname"%> :</label>
+	<div class="form_row_value">
+		<span class="value"><%=@User.lastname%> </span>
+		<%= f.text_field :lastname,:size =>"30",:class =>"value hide" %>
+		<%if @User.errors[:lastname]%>
+			<p class="inline-errors value hide"> <%=@User.errors[:lastname][0]%></p>
+		<%end%>		
+	</div>
+</div>
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.sex"%> :</label>
+	<div class="form_row_value">
+		<span class="value"><%=@User.sex%> </span>
+		<%= select_tag 'user[sex]', options_for_select(User.getSexTypes,User.getSexTypes), class: 'value hide' %>
+		<%if @User.errors[:sex]%>
+			<p class="inline-errors value hide"> <%=@User.errors[:sex][0]%></p>
+		<%end%>		
+	</div>
+</div>
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.address"%> :</label>
+	<div class="form_row_value">
+		<span class="value"><%=@User.address%> </span>
+		<%= f.text_field :address,:size =>"30",:class =>"value hide" %>
+		<%if @User.errors[:address]%>
+			<p class="inline-errors value hide"> <%=@User.errors[:address][0]%></p>
+		<%end%>		
+	</div>
+</div>
+
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.zipcode"%> :</label>
+	<div class="form_row_value">
+		<span class="value"><%=@User.zipcode%> </span>
+		<%= f.text_field :zipcode,:size =>"30",:class =>"value hide" %>
+		<%if @User.errors[:zipcode]%>
+			<p class="inline-errors value hide"> <%=@User.errors[:zipcode][0]%></p>
+		<%end%>		
+	</div>
+</div>
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.city"%> :</label>
+	<div class="form_row_value">
+		<span class="value"><%=@User.city%> </span>
+		<%= f.text_field :city,:size =>"30",:class =>"value hide" %>
+		<%if @User.errors[:city]%>
+			<p class="inline-errors value hide"> <%=@User.errors[:city][0]%></p>
+		<%end%>		
+	</div>
+</div>
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.state"%> :</label>
+	<div class="form_row_value">
+		<span class="value"><%=@User.state%> </span>
+		<%= select_tag 'user[state]', options_for_select(@provincias), class: 'value hide' %>
+		<%if @User.errors[:state]%>
+			<p class="inline-errors value hide"> <%=@User.errors[:state][0]%></p>
+		<%end%>		
+	</div>
+</div>
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.country"%> :</label>
+	<div class="form_row_value">
+		<span class="value"><%=image_tag "flags/#{@User.country}.png"%> </span>
+		<div class="value hide"><%= country_select("user", "country",[ "Spain" ]) %></div>
+		<%if @User.errors[:country]%>
+			<p class="inline-errors value hide"> <%=@User.errors[:country][0]%></p>
+		<%end%>		
+	</div>
+</div>
+<div class="form_row button_row row-100">	
+	<a  class="editUser formButton hiddableButton" href="#"><%=I18n.t "bidspain.common.edit"%></a>
+	<a  class="editUser formButton hide hiddableButton" href="#"><%=I18n.t "bidspain.common.cancel"%></a>
+	<a id="sendForm" class="formButton hide hiddableButton" href="#"><%=I18n.t "bidspain.common.save"%></a>
+</div>
+
+
+
+
+
+
+<%end%>
+
+

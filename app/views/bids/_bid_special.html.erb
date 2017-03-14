@@ -1,0 +1,81 @@
+<%timeLeft=bid.getRemainingTime%>
+<div class="bid bid_special">
+	<div class="article_content ">
+		<div class="bigOffer"><%=I18n.t "bidspain.bids.specialbid"%> </div>
+		<div class="bigProductTitle"><%=bid.product.localicedTitle%></div>
+		<div class="row-100">
+			<div class="product_img_container"><%= image_tag("#{bid.product.image_url.url(:mainprincipal)}",class: "product_img_normal")%></div>
+			<%if !bid.closed%>
+
+			<div class="time" data-id="<%=bid.id%>">
+				<p class="hours" ><span><%=timeLeft.hours%></span> h&nbsp;</p>
+				<p class="minutes" ><span><%=timeLeft.minutes%></span> m</p>
+				<p class="seconds" ><span><%=timeLeft.seconds%></span> s&nbsp;</p>
+			</div>
+			<%end%>	
+		</div>	
+		<%if !bid.closed%>
+			<div class="overlay_actions  overlay hide">
+				<div class="socialOverlayActions">
+					<ul  class ="bidSocialList horizontal">
+						<li>
+							<a target="_blank" href="https://plus.google.com/share?url=<%=bid.shareurl%>" >
+								<%= image_tag "theme/wrapper/gbBlack.png",:alt=>(I18n.t "bidspain.bids.sharebidgoogle") %>					
+							</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://twitter.com/share?url=<%=bid.shareurl%>&text=Puja por  <%=bid.product.localicedTitle%> en <%=bid.shareurl%>"" >
+								<%= image_tag "theme/wrapper/twitterBlack.png",:alt=>(I18n.t "bidspain.bids.sharebidtwitter") %>					
+							</a>
+						</li>
+						<li>
+							<a target="_blank" href="http://www.facebook.com/sharer.php?u=<%=bid.shareurl%>" >
+								<%= image_tag "theme/wrapper/fbBlack.png",:alt=>(I18n.t "bidspain.bids.sharebidfacebook") %>					
+							</a>
+						</li>	
+						<li>
+							<a target="_blank" href="http://www.tuenti.com/share?url=<%=bid.shareurl%>" >
+								<%= image_tag "theme/wrapper/tuentiblack.png",:alt=>(I18n.t "bidspain.bids.sharebidtuenti") %>					
+							</a>
+						</li>							
+					</ul>
+				</div>
+				<div class="goToBidContainer ">
+					<a href="/bids/<%=bid.id%>">
+						<%= image_tag "theme/wrapper/bidMain.png",:alt=>(I18n.t "bidspain.common.bet") %>		
+					</a>
+				</div>
+			</div>
+		<%else%>
+			<div class="overlay_actions_closed   ">
+
+			</div>
+		<%end%>
+	</div>
+	<div class="article_description row-100 shardBG">
+		<div class="bidsBox bidsDoneBox">			
+			 <%=I18n.t "bidspain.common.bets"%> <%=I18n.t "bidspain.common.doneplural"%>: <span class="bidsBoxNumber"><%=(bid.nbids)%></span> 
+		</div>
+		<div class="bidsBox bidsLeftBox">			
+			<%=I18n.t "bidspain.common.bets"%> <%=I18n.t "bidspain.common.leftplural"%>:  <span class="bidsBoxNumber "><%=bid.leftbids%></span>  
+		</div>
+		<div class="maxPriceBox">
+		<%=I18n.t "bidspain.bids.maxprice"%>:<span class="maxPrice"> <%=bid.maxbid%> €</span>
+		</div>
+	</div>	
+	<%if !bid.closed%>
+		<div class="article_content article_content_overlay overlay hide ">
+		</div>
+		<div class="article_description article_description_overlay  overlay row-100 hide">
+			<p><a href="/instrucciones" class="rememberHow"><span><%=I18n.t "bidspain.bids.rememberhowtobid"%> </span></a></p>
+		</div>
+	<%else%>	
+		<div class="article_content_closed  ">	
+			<div class="goToBidContainer overlay hide ">
+				<a href="/bids/<%=bid.id%>">
+					<%= image_tag "theme/wrapper/resultsMain.png",:alt=>(I18n.t "bidspain.bids.seeresults") %>		
+				</a>
+			</div>
+		</div>
+	<%end%>
+</div> 

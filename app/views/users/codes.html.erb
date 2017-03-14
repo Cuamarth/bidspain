@@ -1,0 +1,29 @@
+<div id="UserWrapper">
+	<%=render partial: "user_section"%>
+	
+
+	<div id="detailsSection" >
+
+		<div class="detailsContainer ">
+						
+			<div class="alertBox row-100 hide" id="errorBox">		
+				<p></p>
+			</div>
+			<div class="alertBox row-100 hide " id="successBox">		
+				<p></p>
+			</div>
+			<form id="insertCode"  method="post" action="/user/codes" accept-charset="UTF-8" data-remote="true">
+
+				<div class="coderow row-100">
+					<input class="codeInput" type="text" name="codeValue"  placeholder="<%=I18n.t "bidspain.user.introducecode"%> " size="35">
+				</div>
+				<div class="coderow row-100">
+					<a id="sendForm" class="formButton " href="#"><%=I18n.t "bidspain.common.confirm"%>  </a>
+
+				</div>	
+			</form>			
+		</div>	
+					
+				
+	</div>
+</div>

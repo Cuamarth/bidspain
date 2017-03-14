@@ -1,0 +1,23 @@
+
+<div class="row row-100">
+	<%if @bids.length >0 %>
+
+		<div class="part66">
+			<%= render partial: "bid_special", locals: {bid: @bids[0]} %>
+		</div>
+	<%end%>
+	<%if @bids.length >1 %>
+	<div class="part33">
+		<%= render partial: "bid", locals: {bid: @bids[1]} %>	
+	</div>
+	<%end%>
+	
+<% @bids.drop(2).each_slice(3)   do |rowBids| %>
+	<%rowBids.each.with_index do |bid,i|%>
+	<div class='part33 <%="everytree" if i==0%> '>
+		<%= render partial: "bid", locals: {bid: bid}%>	
+	</div>
+	<%end%>
+<% end %>	
+</div>
+

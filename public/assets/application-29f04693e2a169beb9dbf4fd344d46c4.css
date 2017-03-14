@@ -1,0 +1,2396 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+
+
+
+
+
+ * 
+ */
+
+/* line 1, ../../app/assets/stylesheets/main.css.scss */
+a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+/* line 5, ../../app/assets/stylesheets/main.css.scss */
+a:hover {
+  color: #f2c53c;
+}
+
+/* line 9, ../../app/assets/stylesheets/main.css.scss */
+a.mailLink {
+  color: #2A5CC4;
+}
+
+/* line 13, ../../app/assets/stylesheets/main.css.scss */
+a.contentLink {
+  color: #f2c53c;
+}
+
+/* line 16, ../../app/assets/stylesheets/main.css.scss */
+a.contentLink:hover {
+  color: #DA8B03;
+}
+
+/* line 20, ../../app/assets/stylesheets/main.css.scss */
+.ultra-bold {
+  font-weight: 700;
+}
+
+/* line 23, ../../app/assets/stylesheets/main.css.scss */
+body#main {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0px;
+  font-size: 13px;
+  line-height: 18px;
+}
+/* line 29, ../../app/assets/stylesheets/main.css.scss */
+body#main .container {
+  width: 958px;
+  margin: 0px auto;
+}
+/* line 34, ../../app/assets/stylesheets/main.css.scss */
+body#main .out-container {
+  width: 990px;
+  margin: 0px auto;
+}
+/* line 39, ../../app/assets/stylesheets/main.css.scss */
+body#main .out-container .border-left {
+  background-image: url(theme/header/header_border_left.png);
+  height: 100%;
+  width: 16px;
+  float: left;
+}
+/* line 45, ../../app/assets/stylesheets/main.css.scss */
+body#main .out-container .border-right {
+  background-image: url(theme/header/header_border_right.png);
+  height: 100%;
+  width: 16px;
+  float: right;
+}
+/* line 54, ../../app/assets/stylesheets/main.css.scss */
+body#main ul.horizontal {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+/* line 58, ../../app/assets/stylesheets/main.css.scss */
+body#main ul.horizontal li {
+  float: left;
+}
+/* line 63, ../../app/assets/stylesheets/main.css.scss */
+body#main .shardBG {
+  background-image: url(theme/header/header_background.png);
+}
+/* line 66, ../../app/assets/stylesheets/main.css.scss */
+body#main .shardBG2 {
+  background-image: url(theme/header/shardBG2.png);
+}
+/* line 71, ../../app/assets/stylesheets/main.css.scss */
+body#main .row-100 {
+  width: 100%;
+}
+/* line 74, ../../app/assets/stylesheets/main.css.scss */
+body#main .hide {
+  display: none;
+}
+/* line 77, ../../app/assets/stylesheets/main.css.scss */
+body#main .errorText {
+  color: #fc0000;
+  font-weight: 300;
+}
+/* line 81, ../../app/assets/stylesheets/main.css.scss */
+body#main .errorInput {
+  color: #fc0000;
+  border: 1px solid #fc0000;
+}
+/* line 85, ../../app/assets/stylesheets/main.css.scss */
+body#main .errorInput:focus {
+  color: #fc0000;
+  border: 1px solid #fc0000;
+}
+/* line 90, ../../app/assets/stylesheets/main.css.scss */
+body#main .formButton {
+  background-color: #534e4e;
+  font-size: 14px;
+  padding: 4px 10px;
+  color: #f2c53c;
+  border: 1px solid #f2c53c;
+}
+/* line 97, ../../app/assets/stylesheets/main.css.scss */
+body#main .formButton:hover {
+  color: #fff;
+}
+/* line 101, ../../app/assets/stylesheets/main.css.scss */
+body#main .alertBox {
+  float: left;
+  line-height: 24px;
+  margin-bottom: 5px;
+}
+/* line 105, ../../app/assets/stylesheets/main.css.scss */
+body#main .alertBox p {
+  color: #7e0323;
+  font-size: 12px;
+  float: left;
+  margin: 0 10px 0 10px;
+  width: 90%;
+}
+/* line 112, ../../app/assets/stylesheets/main.css.scss */
+body#main .alertBox a {
+  float: right;
+  color: #7e0323;
+  margin-right: 5px;
+}
+/* line 117, ../../app/assets/stylesheets/main.css.scss */
+body#main .alertBox a.mailLink {
+  float: none;
+  color: #2A5CC4;
+}
+/* line 122, ../../app/assets/stylesheets/main.css.scss */
+body#main #successBox {
+  background-color: #d3f9d7;
+  border: 1px solid #058411;
+}
+/* line 125, ../../app/assets/stylesheets/main.css.scss */
+body#main #successBox p {
+  color: #058411;
+}
+/* line 128, ../../app/assets/stylesheets/main.css.scss */
+body#main #successBox a {
+  color: #058411;
+}
+/* line 131, ../../app/assets/stylesheets/main.css.scss */
+body#main #successBox a.mailLink {
+  color: #2A5CC4;
+}
+/* line 135, ../../app/assets/stylesheets/main.css.scss */
+body#main #errorBox {
+  border: 1px solid #fc0000;
+  background-color: #feecf1;
+}
+/* line 138, ../../app/assets/stylesheets/main.css.scss */
+body#main #errorBox p {
+  color: #7e0323;
+}
+/* line 141, ../../app/assets/stylesheets/main.css.scss */
+body#main #errorBox a {
+  color: #7e0323;
+}
+/* line 146, ../../app/assets/stylesheets/main.css.scss */
+body#main #invalidBox {
+  border: 1px solid #6d6d6d;
+  background-color: #dedede;
+}
+/* line 149, ../../app/assets/stylesheets/main.css.scss */
+body#main #invalidBox p {
+  color: #6d6d6d;
+}
+/* line 152, ../../app/assets/stylesheets/main.css.scss */
+body#main #invalidBox a {
+  color: #6d6d6d;
+}
+/* line 157, ../../app/assets/stylesheets/main.css.scss */
+body#main #warningBox {
+  border: 1px solid #72710a;
+  background-color: #fafad1;
+}
+/* line 160, ../../app/assets/stylesheets/main.css.scss */
+body#main #warningBox p {
+  color: #72710a;
+}
+/* line 163, ../../app/assets/stylesheets/main.css.scss */
+body#main #warningBox a {
+  color: #72710a;
+}
+/* line 168, ../../app/assets/stylesheets/main.css.scss */
+body#main .smallIcon {
+  height: 16px;
+  width: 16px;
+}
+/* line 173, ../../app/assets/stylesheets/main.css.scss */
+body#main .centered {
+  text-align: center;
+}
+/* line 176, ../../app/assets/stylesheets/main.css.scss */
+body#main .toright {
+  text-align: right;
+}
+/* line 179, ../../app/assets/stylesheets/main.css.scss */
+body#main .toleft {
+  text-align: left;
+}
+/* line 182, ../../app/assets/stylesheets/main.css.scss */
+body#main .field_with_errors input {
+  border: 1px solid #932419;
+}
+/* line 185, ../../app/assets/stylesheets/main.css.scss */
+body#main .inline-errors {
+  color: #932419;
+}
+/* line 190, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer {
+  height: 100px;
+  font-weight: 600;
+  background-color: #534e4e;
+}
+/* line 195, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header {
+  height: 100%;
+  margin: 0px auto;
+}
+/* line 199, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central {
+  height: 100%;
+  float: left;
+}
+/* line 202, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #logo {
+  width: 227px;
+  height: 100px;
+  float: left;
+}
+/* line 206, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #logo a {
+  border: none;
+  color: transparent;
+}
+/* line 209, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #logo a img {
+  margin-top: 1px;
+}
+/* line 213, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #logo h1, body#main #headerContainer #header #header-central #logo h2 {
+  display: none;
+}
+/* line 217, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content {
+  width: 731px;
+  float: right;
+  height: 100px;
+  position: relative;
+}
+/* line 222, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links {
+  width: 100%;
+  height: 22px;
+  line-height: 20px;
+  font-size: 14px;
+  margin-top: 8px;
+}
+/* line 228, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links ul {
+  float: right;
+}
+/* line 230, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links ul li {
+  padding-right: 20px;
+  padding-left: 20px;
+  height: 22px;
+  border-right: 1px solid #FFFFFF;
+}
+/* line 235, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links ul li .redCounter {
+  text-align: center;
+  height: 12px;
+  width: 16px;
+  float: right;
+  color: #fff;
+  font-size: 9px;
+  line-height: 10px;
+  background: url(theme/header/redSquare.png) top left repeat;
+}
+/* line 247, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links ul li a img {
+  display: none;
+}
+/* line 252, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links ul li#userLink, body#main #headerContainer #header #header-central #header-content #header-top-links ul li#loginLinkLI {
+  position: relative;
+}
+/* line 255, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links ul li:last-child {
+  border-right: none;
+  padding-right: 15px;
+}
+/* line 259, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links ul li#trophy {
+  height: 22px;
+  width: 46px;
+  padding-right: 10px;
+  padding-left: 10px;
+  text-align: center;
+}
+/* line 265, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links ul li#trophy a {
+  height: 22px;
+  width: 46px;
+}
+/* line 268, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links ul li#trophy a img {
+  height: 22px;
+  display: inline;
+}
+/* line 274, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links ul li#freeBidsUpperCount {
+  height: 22px;
+  width: 46px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background: url(theme/header/freebids2.png) bottom center no-repeat;
+}
+/* line 281, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links ul li#halfBidsUpperCount {
+  height: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 46px;
+  background: url(theme/header/halfBids.png) top center no-repeat;
+}
+/* line 288, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links ul li#languageSelector {
+  float: left;
+  margin-left: 10px;
+  border: none;
+}
+/* line 293, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links ul li#languageSelector a img {
+  display: inline;
+  margin-top: 2px;
+}
+/* line 301, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links #userTopMenu {
+  top: 28px;
+  left: -10%;
+  position: absolute;
+  width: 180px;
+  z-index: 999;
+}
+/* line 307, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links #userTopMenu .menu_container {
+  top: 10px;
+  left: 0;
+  background-color: #534e4e;
+  position: absolute;
+  border: 1px solid #fff;
+  width: 100%;
+}
+/* line 314, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links #userTopMenu .menu_container ul#userTopMenuLinks {
+  list-style: none;
+  padding: 0;
+}
+/* line 317, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links #userTopMenu .menu_container ul#userTopMenuLinks li.userLink {
+  height: 26px;
+  background: url(theme/header/enterSpark.png) 50px 0 no-repeat;
+  text-align: center;
+  line-height: 26px;
+  margin-top: 8px;
+  width: 100%;
+  z-index: 9999;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 329, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links #userTopMenu .menu_container ul#userTopMenuLinks li.userLink a {
+  border: none;
+  font-size: 13px;
+  color: #f2c53c;
+  font-weight: 600;
+}
+/* line 335, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links #userTopMenu .menu_container ul#userTopMenuLinks li.userLink a:hover {
+  color: #da8b03;
+}
+/* line 341, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links #userTopMenu #menu-sup {
+  position: absolute;
+  top: 1px;
+  left: 82px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #FFF;
+}
+/* line 351, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-top-links #userTopMenu #menu-sup:after {
+  content: '';
+  position: absolute;
+  z-index: 1000;
+  top: 1px;
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 9px solid #534e4e;
+}
+/* line 365, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-bottom-links {
+  color: #a9a8a8;
+  bottom: 10px;
+  font-size: 14px;
+  height: 26px;
+  width: 100%;
+  position: absolute;
+}
+/* line 372, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-bottom-links ul#secureList {
+  height: 100%;
+  float: left;
+  margin-left: 10px;
+  font-weight: 300;
+}
+/* line 377, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-bottom-links ul#secureList li {
+  height: 100%;
+  margin-right: 15px;
+}
+/* line 380, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-bottom-links ul#secureList li span {
+  position: relative;
+  top: 10px;
+  width: 100px;
+}
+/* line 386, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-bottom-links ul#secureList li#secureDispatch {
+  padding-left: 35px;
+  background: url(theme/header/secureDispatch.png) bottom left no-repeat;
+}
+/* line 390, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-bottom-links ul#secureList li#secureMoney {
+  padding-left: 28px;
+  background: url(theme/header/paypalsmall.png) bottom left no-repeat;
+}
+/* line 394, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-bottom-links ul#secureList li#secureGeneral {
+  padding-left: 40px;
+  background: url(theme/header/visasmall.png) bottom left no-repeat;
+  margin-right: 0px;
+}
+/* line 400, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-bottom-links ul#socialList {
+  float: right;
+  height: 100%;
+}
+/* line 403, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-bottom-links ul#socialList li {
+  margin-right: 10px;
+  margin-top: 4px;
+}
+/* line 407, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-bottom-links ul#socialList li:last-child {
+  margin-right: 15px;
+}
+/* line 410, ../../app/assets/stylesheets/main.css.scss */
+body#main #headerContainer #header #header-central #header-content #header-bottom-links ul#socialList a {
+  color: transparent;
+}
+/* line 426, ../../app/assets/stylesheets/main.css.scss */
+body#main #wrapper {
+  display: table;
+}
+/* line 428, ../../app/assets/stylesheets/main.css.scss */
+body#main #wrapper #wrapper-container {
+  display: table-row;
+}
+/* line 430, ../../app/assets/stylesheets/main.css.scss */
+body#main #wrapper #wrapper-container #wrapper-left {
+  display: table-cell;
+  background-image: url(theme/wrapper/wrapper_border_left.png);
+  height: 100%;
+  width: 16px;
+}
+/* line 436, ../../app/assets/stylesheets/main.css.scss */
+body#main #wrapper #wrapper-container #wrapper-right {
+  display: table-cell;
+  background-image: url(theme/wrapper/wrapper_border_right.png);
+  height: 100%;
+  width: 16px;
+}
+/* line 442, ../../app/assets/stylesheets/main.css.scss */
+body#main #wrapper #wrapper-container #wrapper-content {
+  display: table-cell;
+  min-height: 800px;
+  width: 928px;
+  padding: 50px 15px 50px 15px;
+}
+/* line 453, ../../app/assets/stylesheets/main.css.scss */
+body#main #footerContainer {
+  height: 72px;
+  font-size: 14px;
+  font-weight: 300;
+  background-color: #534e4e;
+  color: #fff;
+}
+/* line 459, ../../app/assets/stylesheets/main.css.scss */
+body#main #footerContainer #footer {
+  height: 100%;
+}
+/* line 461, ../../app/assets/stylesheets/main.css.scss */
+body#main #footerContainer #footer #footer-central {
+  height: 100%;
+  float: left;
+}
+/* line 465, ../../app/assets/stylesheets/main.css.scss */
+body#main #footerContainer #footer #footer-central ul {
+  margin: 0px auto;
+  margin-top: 32px;
+  float: left;
+}
+/* line 469, ../../app/assets/stylesheets/main.css.scss */
+body#main #footerContainer #footer #footer-central ul li {
+  display: inline;
+  padding-left: 22px;
+  padding-right: 22px;
+  border-right: 1px solid #fff;
+}
+/* line 475, ../../app/assets/stylesheets/main.css.scss */
+body#main #footerContainer #footer #footer-central ul li:last-child {
+  border: none;
+}
+/* line 479, ../../app/assets/stylesheets/main.css.scss */
+body#main #footerContainer #footer #footer-central img {
+  height: 16px;
+}
+/* line 484, ../../app/assets/stylesheets/main.css.scss */
+body#main #footerContainer #footer #footer-central p {
+  display: none;
+}
+/* line 491, ../../app/assets/stylesheets/main.css.scss */
+body#main #loginForm {
+  top: 28px;
+  left: -70%;
+  position: absolute;
+  width: 200px;
+  z-index: 999;
+}
+/* line 497, ../../app/assets/stylesheets/main.css.scss */
+body#main #loginForm #login-Sup {
+  position: absolute;
+  top: 1px;
+  left: 92px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #FFF;
+}
+/* line 507, ../../app/assets/stylesheets/main.css.scss */
+body#main #loginForm #login-Sup:after {
+  content: '';
+  position: absolute;
+  z-index: 1000;
+  top: 1px;
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 9px solid #534e4e;
+}
+/* line 519, ../../app/assets/stylesheets/main.css.scss */
+body#main #loginForm #loginContainer {
+  top: 10px;
+  left: 0;
+  background-color: #534e4e;
+  position: absolute;
+  border: 1px solid #fff;
+  width: 100%;
+}
+/* line 527, ../../app/assets/stylesheets/main.css.scss */
+body#main #loginForm #loginContainer #loginFields input {
+  margin: 5px 4px 5px 4px;
+  font-size: 17px;
+  background-color: transparent;
+  width: 190px;
+  height: 25px;
+}
+/* line 535, ../../app/assets/stylesheets/main.css.scss */
+body#main #loginForm #loginContainer #loginFields .loginInput {
+  border: 1px solid #ecc13d;
+  color: #ecc13d;
+}
+/* line 539, ../../app/assets/stylesheets/main.css.scss */
+body#main #loginForm #loginContainer #loginFields ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #ecc13d;
+  opacity: 0.5;
+}
+/* line 543, ../../app/assets/stylesheets/main.css.scss */
+body#main #loginForm #loginContainer #loginFields input#userpassword {
+  margin: 0px 4px 5px 4px;
+}
+/* line 546, ../../app/assets/stylesheets/main.css.scss */
+body#main #loginForm #loginContainer #loginFields .loginInput:focus {
+  border: 1px solid #da8b03;
+  color: #da8b03;
+}
+/* line 550, ../../app/assets/stylesheets/main.css.scss */
+body#main #loginForm #loginContainer #loginFields a {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 300;
+  margin: 0px 4px 5px 6px;
+}
+/* line 557, ../../app/assets/stylesheets/main.css.scss */
+body#main #loginForm #loginContainer #loginFields .errorText {
+  font-size: 11px;
+  line-height: 10px;
+  margin: 0px 4px 5px 6px;
+}
+/* line 564, ../../app/assets/stylesheets/main.css.scss */
+body#main #loginForm #loginContainer #enterBox {
+  height: 35px;
+  background: url(theme/header/enterSpark.png) 50px 0 no-repeat;
+  text-align: center;
+  line-height: 31px;
+  margin-top: 8px;
+  font-size: 28px;
+  z-index: 9999;
+}
+/* line 572, ../../app/assets/stylesheets/main.css.scss */
+body#main #loginForm #loginContainer #enterBox a:hover {
+  color: #da8b03;
+}
+/* line 575, ../../app/assets/stylesheets/main.css.scss */
+body#main #loginForm #loginContainer #enterBox a {
+  color: #ecc13d;
+}
+/* line 585, ../../app/assets/stylesheets/main.css.scss */
+body#main #infoContainer #importantPoints {
+  float: left;
+}
+/* line 588, ../../app/assets/stylesheets/main.css.scss */
+body#main #infoContainer h2 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  float: left;
+}
+/* line 593, ../../app/assets/stylesheets/main.css.scss */
+body#main #infoContainer p {
+  font-size: 15px;
+}
+/* line 595, ../../app/assets/stylesheets/main.css.scss */
+body#main #infoContainer p span.capital {
+  font-size: 20px;
+}
+/* line 599, ../../app/assets/stylesheets/main.css.scss */
+body#main #infoContainer p.especial {
+  font-size: 28px;
+  line-height: 32px;
+  color: #DA8B03;
+  font-weight: 700px;
+  text-align: center;
+}
+/* line 606, ../../app/assets/stylesheets/main.css.scss */
+body#main #infoContainer .infoBox {
+  width: 290px;
+  padding: 5px;
+  float: left;
+  margin-right: 11px;
+  border: 1px solid #000;
+  height: 378px;
+}
+/* line 613, ../../app/assets/stylesheets/main.css.scss */
+body#main #infoContainer .infoBox .nobottomMargin {
+  margin-bottom: 0px;
+}
+/* line 616, ../../app/assets/stylesheets/main.css.scss */
+body#main #infoContainer .infoBox p.finalImage {
+  margin: 0 0 0 -5px;
+}
+/* line 621, ../../app/assets/stylesheets/main.css.scss */
+body#main #infoContainer .infoBox:last-child {
+  margin-right: 0px;
+}
+/* line 626, ../../app/assets/stylesheets/main.css.scss */
+body#main #infoContainer ul li {
+  font-size: 15px;
+  line-height: 25px;
+}
+/* line 632, ../../app/assets/stylesheets/main.css.scss */
+body#main #infoContainer #whoweareContainer {
+  width: 700px;
+  margin: 0px auto;
+}
+/* line 635, ../../app/assets/stylesheets/main.css.scss */
+body#main #infoContainer #whoweareContainer .quote p {
+  font-size: 25px;
+  line-height: 30px;
+  font-style: italic;
+  font-weight: 600px;
+  box-shadow: 5px 5px 3px  5px #888888;
+  padding: 10px;
+}
+
+/* line 650, ../../app/assets/stylesheets/main.css.scss */
+#CookieAdvice {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 70%;
+  width: 310px;
+  height: 120px;
+  line-height: 15px;
+  color: #534e4e;
+  background-color: #FFF;
+  border-radius: 10px 10px 10px 10px;
+  padding: 10px;
+  z-index: 9999;
+  border: 1px solid #534e4e;
+}
+/* line 664, ../../app/assets/stylesheets/main.css.scss */
+#CookieAdvice p {
+  margin: 3px 0;
+}
+/* line 667, ../../app/assets/stylesheets/main.css.scss */
+#CookieAdvice a.close {
+  margin-top: 15px;
+}
+/* line 2, ../../app/assets/stylesheets/bids.css.scss */
+.row:first-child {
+  margin-top: 0px;
+}
+
+/* line 5, ../../app/assets/stylesheets/bids.css.scss */
+.row {
+  float: left;
+  margin-top: 65px;
+  position: relative;
+}
+/* line 10, ../../app/assets/stylesheets/bids.css.scss */
+.row .part66 {
+  width: 614px;
+  float: left;
+  margin-bottom: 60px;
+}
+/* line 15, ../../app/assets/stylesheets/bids.css.scss */
+.row .part33 {
+  width: 300px;
+  float: left;
+  margin-left: 14px;
+  margin-bottom: 60px;
+}
+/* line 21, ../../app/assets/stylesheets/bids.css.scss */
+.row .part33.everytree {
+  margin-left: 0px;
+}
+/* line 24, ../../app/assets/stylesheets/bids.css.scss */
+.row .part33:first-child {
+  margin-left: 0px;
+}
+/* line 27, ../../app/assets/stylesheets/bids.css.scss */
+.row .part50 {
+  width: 50%;
+  float: left;
+}
+/* line 31, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid {
+  width: 300px;
+  font-size: 17px;
+  font-weight: 600;
+  height: 248px;
+  border: 1px solid #534e4e;
+  border-radius: 4px;
+  position: relative;
+  background-color: #FFF;
+  box-shadow: 5px 5px 3px #888;
+}
+/* line 45, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_description {
+  height: 48px;
+  background-color: #534e4e;
+  color: #FFF;
+  font-size: 11px;
+}
+/* line 51, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_description .bidsBox {
+  padding: 0 5px 0 11px;
+  height: 100%;
+  float: left;
+  height: 40px;
+  margin-top: 4px;
+  width: 84px;
+  font-size: 15px;
+}
+/* line 59, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_description .bidsBox .bidsBoxNumber {
+  color: #ecc13d;
+  margin-left: 5px;
+  font-size: 15px;
+}
+/* line 65, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_description .bidsLeftBox {
+  border-left: 1px solid  #FFF;
+}
+/* line 69, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_description .maxPriceBox {
+  height: 100%;
+  float: right;
+  width: 85px;
+  padding: 0 5px;
+  height: 40px;
+  margin-top: 4px;
+  border-left: 1px solid  #FFF;
+}
+/* line 77, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_description .maxPriceBox .maxPrice {
+  color: #ecc13d;
+  font-size: 24px;
+}
+/* line 83, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content {
+  height: 190px;
+  width: 290px;
+  padding: 5px;
+}
+/* line 87, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .bidTitle {
+  z-index: 100;
+  position: relative;
+}
+/* line 91, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .bigOffer, .row .bid .article_content .bigProductTitle {
+  position: absolute;
+  background: url(theme/wrapper/specialTitleBG.png);
+  z-index: 10;
+  left: 10px;
+  top: 150px;
+  width: 250px;
+}
+/* line 99, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .bigProductTitle {
+  top: 180px;
+  font-size: 14px;
+  line-height: 15px;
+}
+/* line 104, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .bigOffer {
+  color: #3d1e6f;
+  font-size: 26px;
+  line-height: 26px;
+  height: 35px;
+  font-weight: 600;
+}
+/* line 111, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .product_img_container {
+  height: 170px;
+  width: 200px;
+  float: left;
+  text-align: center;
+  position: relative;
+}
+/* line 117, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .product_img_container img.product_img_normal {
+  float: none;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  margin: auto auto;
+}
+/* line 127, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .product_img_container.outlet {
+  height: 190px;
+}
+/* line 130, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .time {
+  width: 80px;
+  float: left;
+  z-index: 100;
+  position: relative;
+  border-left: 1px solid #534e4e;
+}
+/* line 136, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .time p {
+  text-align: right;
+  font-size: 28px;
+  color: #da8b03;
+}
+/* line 140, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .time p span {
+  color: #414040;
+}
+/* line 146, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .time.outlet p {
+  margin: 33px 0;
+}
+/* line 150, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .overlay_actions {
+  position: absolute;
+  top: 20px;
+  height: 170px;
+  width: 190px;
+  margin-right: 10px;
+  float: left;
+  z-index: 100;
+}
+/* line 158, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .overlay_actions .socialOverlayActions {
+  position: relative;
+  top: 50px;
+  left: 0px;
+  height: 20px;
+  z-index: 100;
+  text-align: center;
+}
+/* line 165, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .overlay_actions .socialOverlayActions ul.bidSocialList {
+  margin-left: 20px;
+  height: 100%;
+}
+/* line 168, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .overlay_actions .socialOverlayActions ul.bidSocialList li {
+  margin-left: 18px;
+}
+/* line 171, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .overlay_actions .socialOverlayActions ul.bidSocialList li:first-child {
+  margin-left: 18px;
+}
+/* line 174, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .overlay_actions .socialOverlayActions ul.bidSocialList a {
+  color: transparent;
+}
+/* line 180, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .overlay_actions .goToBidContainer {
+  text-align: center;
+  position: relative;
+  top: 60px;
+  left: 0px;
+  height: 40px;
+  opacity: 1;
+  z-index: 100;
+}
+/* line 188, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .overlay_actions .goToBidContainer a {
+  color: transparent;
+}
+/* line 194, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content .overlay_actions_closed {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background-color: #DEDEDE;
+  opacity: 0.8;
+}
+/* line 209, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content_closed {
+  position: absolute;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url(theme/wrapper/closed.png) no-repeat top right;
+}
+/* line 217, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content_closed .goToBidContainer {
+  text-align: center;
+  position: relative;
+  top: 90px;
+  left: -10px;
+  height: 40px;
+  opacity: 1;
+  z-index: 400;
+  border: none;
+}
+/* line 227, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content_closed .goToBidContainer a {
+  position: relative;
+  z-index: 500;
+  color: transparent;
+}
+/* line 235, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_content_overlay {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  background-color: #DEDEDE;
+  opacity: 0.55;
+}
+/* line 244, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_description_overlay {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  background-color: #DEDEDE;
+  z-index: 20;
+  opacity: 1;
+}
+/* line 251, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_description_overlay p {
+  text-align: center;
+  margin: 0px;
+  margin-top: 12px;
+}
+/* line 256, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_description_overlay p a {
+  font-size: 20px;
+}
+/* line 258, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_description_overlay p a span {
+  color: #2a5cc4;
+}
+/* line 262, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_description_overlay p a:hover {
+  font-size: 21px;
+}
+/* line 264, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid .article_description_overlay p a:hover span {
+  color: #2a5cc4;
+}
+/* line 274, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid_special {
+  width: 614px;
+}
+/* line 277, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid_special .article_description {
+  font-size: 13px;
+}
+/* line 279, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid_special .article_description .bidsBox {
+  padding: 10px 5px 0 17px;
+  height: 30px;
+  width: 215px;
+  vertical-align: middle;
+  font-size: 19px;
+  font-size: 18px\9;
+}
+/* line 286, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid_special .article_description .bidsBox .bidsBoxNumber {
+  font-size: 24px;
+  margin-left: 10px;
+}
+/* line 291, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid_special .article_description .maxPriceBox {
+  width: 114px;
+  text-align: center;
+}
+/* line 297, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid_special .article_content {
+  width: 590px;
+  z-index: 1;
+}
+/* line 301, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid_special .article_content .product_img_container {
+  height: 190px;
+  width: 484px;
+}
+/* line 309, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid_special .article_content .time {
+  width: 104px;
+  z-index: 100;
+  position: relative;
+}
+/* line 314, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid_special .article_content .time p {
+  font-size: 32px;
+}
+/* line 320, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid_special .article_content .bigOffer, .row .bid_special .article_content .bigProductTitle {
+  position: absolute;
+  background: url(theme/wrapper/specialTitleBG.png);
+  z-index: 10;
+  left: 10px;
+  top: 130px;
+  width: 450px;
+}
+/* line 328, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid_special .article_content .bigProductTitle {
+  top: 170px;
+  font-size: 24px;
+  line-height: 25px;
+}
+/* line 333, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid_special .article_content .bigOffer {
+  color: #2a5cc4;
+  font-size: 36px;
+  line-height: 30px;
+  height: 40px;
+  font-weight: 600;
+}
+/* line 340, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid_special .article_content .overlay_actions {
+  float: none;
+  left: 160px;
+  top: 10px;
+}
+/* line 348, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid_special .article_content_closed .goToBidContainer {
+  top: 90px;
+  left: 0px;
+  height: 40px;
+}
+/* line 357, ../../app/assets/stylesheets/bids.css.scss */
+.row .bid_special .article_content_overlay {
+  position: absolute;
+  z-index: 20;
+  width: 605px;
+}
+
+/* line 370, ../../app/assets/stylesheets/bids.css.scss */
+.bidDetails {
+  min-height: 600px;
+  float: left;
+}
+
+/* line 374, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container {
+  width: 573px;
+}
+/* line 376, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container {
+  width: 513px;
+  min-height: 600px;
+  margin: 0px auto;
+}
+/* line 380, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #time_container {
+  font-size: 65px;
+  line-height: 55px;
+  font-weight: 600;
+  float: left;
+  width: 100%;
+}
+/* line 386, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #time_container p.closed {
+  width: 100%;
+  text-align: center;
+  margin: 0 0;
+}
+/* line 391, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #time_container li {
+  margin-right: 52px;
+  color: #DA8B03;
+}
+/* line 394, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #time_container li span {
+  color: #414040;
+}
+/* line 398, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #time_container li:last-child {
+  margin-right: 0px;
+}
+/* line 403, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #bidSelector {
+  margin: 30px 0 20px 0;
+  float: left;
+  width: 100%;
+  font-size: 24px;
+  line-height: 32px;
+}
+/* line 411, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #bidSelector ul li a {
+  color: #000;
+  margin: 0 5px;
+}
+/* line 415, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #bidSelector ul li a:hover {
+  color: #f2c53c;
+}
+/* line 419, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #bidSelector ul li.arrowElement {
+  background: white;
+}
+/* line 422, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #bidSelector ul li.arrowElement a {
+  margin: 0px;
+  color: #fff;
+}
+/* line 427, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #bidSelector ul li.dotted:after {
+  content: "-";
+}
+/* line 433, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #actionBox {
+  float: left;
+  border: 1px solid  #000;
+  height: 80px;
+}
+/* line 437, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #actionBox #MaxPrice {
+  float: left;
+  width: 110px;
+  color: #DA8B03;
+  height: 75px;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 5px;
+  border-right: 1px solid #000;
+}
+/* line 449, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #actionBox #InputMoneyContainer {
+  float: left;
+  width: 166px;
+  padding: 10px 27px;
+  height: 60px;
+  border-right: 1px solid #000;
+}
+/* line 455, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #actionBox #InputMoneyContainer .inputMoney {
+  height: 100%;
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+/* line 460, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #actionBox #InputMoneyContainer .inputMoney input {
+  width: 60px;
+  height: 30px;
+  font-size: 20px;
+  text-align: right;
+}
+/* line 470, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #actionBox #bidButtonContainer {
+  float: left;
+  width: 181px;
+  height: 100%;
+  background-color: #534e4e;
+  text-align: center;
+  font-size: 50px;
+  line-height: 70px;
+  font-weight: 600;
+}
+/* line 479, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #actionBox #bidButtonContainer a {
+  color: #f2c53c;
+}
+/* line 482, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #actionBox #bidButtonContainer a:hover {
+  color: #FFF;
+}
+/* line 488, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #betsList {
+  margin-top: 20px;
+  float: left;
+  font-size: 15px;
+  line-height: 12px;
+  font-weight: 15px;
+}
+/* line 494, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #betsList table {
+  border-spacing: 0 1px;
+  width: 100%;
+}
+/* line 497, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #betsList table tr {
+  margin: 2px 0;
+}
+/* line 499, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #betsList table tr p {
+  margin: 10px 0;
+}
+/* line 502, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #betsList table tr td.bet_id {
+  width: 5%;
+  text-align: center;
+}
+/* line 506, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #betsList table tr td.bet_status {
+  width: 15%;
+}
+/* line 510, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #betsList table tr td.bet_place {
+  width: 30%;
+}
+/* line 513, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #betsList table tr td.bet_place img {
+  float: left;
+  width: 24px;
+  height: 24px;
+}
+/* line 518, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #betsList table tr td.bet_place span {
+  float: left;
+  margin: 5px 0 5px 5px;
+}
+/* line 523, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #betsList table tr td.bet_username {
+  width: 40%;
+  text-align: left;
+}
+/* line 527, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #betsList table tr td.bet_quantity {
+  width: 10%;
+}
+/* line 532, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #betsList table tr.userOwnBid.lastBid {
+  background-color: #D3F9D7 !important;
+}
+/* line 535, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #betsList table tr.userOwnBid {
+  font-weight: 600;
+  font-size: 16px;
+}
+/* line 539, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #betsList table tr.row-0 {
+  background-color: #da8b03;
+}
+/* line 542, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #betsList table tr.row-1 {
+  background-color: #ecc13d;
+}
+/* line 545, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container #betsList table tr.row-2 {
+  background-color: #f4d77c;
+}
+/* line 550, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container .pagination {
+  text-align: right;
+}
+/* line 552, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container .pagination a {
+  color: #DA8B03;
+}
+/* line 555, ../../app/assets/stylesheets/bids.css.scss */
+#left_bid_container #bid_action_container .pagination a:hover {
+  color: #F2C53C;
+}
+
+/* line 562, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container {
+  width: 354px;
+}
+/* line 564, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #actualBidInfo {
+  width: 100%;
+  float: left;
+  background-color: #534e4e;
+}
+/* line 568, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #actualBidInfo .bidInfoItem {
+  width: 107px;
+  margin: 18px 0 13px 0;
+  padding: 5px 5px 10px 5px;
+  float: left;
+  text-align: center;
+  border-right: 1px solid #FFF;
+}
+/* line 575, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #actualBidInfo .bidInfoItem p {
+  font-size: 20px;
+  color: #FFF;
+  margin: 0px;
+  line-height: 22px;
+}
+/* line 581, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #actualBidInfo .bidInfoItem p.dataNumber {
+  font-size: 30px;
+  margin: 0;
+  margin-top: 23px;
+  color: #f2c53c;
+}
+/* line 589, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #actualBidInfo #PrecioPuja {
+  border-right: none;
+}
+/* line 591, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #actualBidInfo #PrecioPuja p.dataNumber {
+  color: #da8b03;
+}
+/* line 595, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #actualBidInfo #InfoBidsUser {
+  width: 334px;
+  margin: 0 5px;
+  padding: 5px 5px 10px 5px;
+  border-top: 1px solid #FFF;
+  float: left;
+}
+/* line 601, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #actualBidInfo #InfoBidsUser .userBidsPre {
+  width: 16%;
+  float: left;
+}
+/* line 604, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #actualBidInfo #InfoBidsUser .userBidsPre p {
+  margin: 0;
+  color: #FFF;
+  font-size: 18px;
+}
+/* line 610, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #actualBidInfo #InfoBidsUser .userBids {
+  width: 42%;
+  float: left;
+}
+/* line 613, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #actualBidInfo #InfoBidsUser .userBids p {
+  margin: 0;
+  color: #FFF;
+  font-size: 14px;
+}
+/* line 617, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #actualBidInfo #InfoBidsUser .userBids p span {
+  font-size: 18px;
+  margin-left: 0px;
+  color: #f2c53c;
+}
+/* line 625, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #actualBidInfo #InfoBidsUser .userBids:last-child p {
+  margin-left: 5px;
+}
+/* line 631, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #product_description {
+  padding: 20px 10px 0px 10px;
+  float: left;
+  width: 334px;
+}
+/* line 635, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #product_description h1 {
+  margin: 0 0 20px 0;
+}
+/* line 638, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #product_description ul#bidSocialShare {
+  margin: 0 0 20px 0;
+  float: left;
+}
+/* line 641, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #product_description ul#bidSocialShare li {
+  margin: 0 10px 0 0;
+}
+/* line 645, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #product_description .img_container {
+  height: 220px;
+  position: relative;
+}
+/* line 649, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #product_description .product_section_container {
+  float: left;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 20px 0;
+}
+/* line 656, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #product_description .product_section_container a {
+  position: absolute;
+  height: 220px;
+  width: 320px;
+  margin-left: 10px;
+  color: #fff;
+}
+/* line 662, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #product_description .product_section_container a img {
+  float: none;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  margin: auto auto;
+}
+/* line 672, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #product_description .product_section_container p.readMore {
+  text-align: right;
+  float: left;
+}
+/* line 675, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #product_description .product_section_container p.readMore a {
+  height: 10px;
+  color: #1f639c;
+}
+/* line 679, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #product_description .product_section_container p.readMore a:hover {
+  font-weight: 600;
+}
+/* line 685, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #product_description .lastWinners {
+  width: 100%;
+}
+/* line 686, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #product_description .lastWinners h3 {
+  font-size: 20px;
+}
+/* line 688, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #product_description .lastWinners h3 img {
+  width: 24px;
+  margin-right: 15px;
+}
+/* line 694, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #product_description .lastWinners ul {
+  list-style: none;
+  padding-left: 5px;
+}
+/* line 697, ../../app/assets/stylesheets/bids.css.scss */
+#right_bid_container #product_description .lastWinners ul li {
+  background: url(theme/wrapper/avatar.png) no-repeat bottom left;
+  padding-left: 30px;
+  line-height: 24px;
+  height: 24px;
+}
+/* line 1, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper {
+  width: 888px;
+  margin: 0px auto;
+}
+/* line 4, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper h1 {
+  font-size: 50px;
+  line-height: 50px;
+  margin: 0 0 50px 0;
+}
+/* line 8, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper h1 a {
+  background: url(theme/wrapper/back.png) bottom left no-repeat;
+  padding-left: 40px;
+  line-height: 32px;
+  font-size: 24px;
+  float: right;
+  color: #DA8B03;
+  margin-top: 13px;
+}
+/* line 17, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper h1 a:hover {
+  color: #f2c53c;
+}
+/* line 21, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #userMenu {
+  width: 237px;
+  float: left;
+}
+/* line 24, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #userMenu ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 28, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #userMenu ul li {
+  margin: 25px 0;
+  font-size: 20px;
+}
+/* line 31, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #userMenu ul li a {
+  color: #000;
+}
+/* line 35, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #userMenu ul li a:hover, #UserWrapper #userMenu ul li a.selected {
+  color: #f2c53c;
+}
+/* line 39, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #userMenu ul li:first-child {
+  margin-top: 0px;
+}
+/* line 44, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection {
+  min-height: 400px;
+  float: left;
+  width: 650px;
+  border-left: 1px solid #000;
+}
+/* line 50, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .deleteAccountInfo {
+  margin-top: 40px;
+  font-size: 11px;
+  float: left;
+}
+/* line 55, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .detailsContainer {
+  width: 630px;
+  margin: 0 0 0 40px;
+}
+/* line 61, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .edit_user .form_row {
+  float: left;
+  margin: 7px 0;
+}
+/* line 64, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .edit_user .form_row label {
+  font-weight: 600;
+  width: 140px;
+  float: left;
+}
+/* line 69, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .edit_user .form_row .form_row_value {
+  float: left;
+}
+/* line 73, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .edit_user .form_row .inline-errors {
+  color: #fc0000;
+  margin: 0 0 0 2px;
+}
+/* line 76, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .edit_user .form_row .inline-errors p {
+  margin: 0px;
+}
+/* line 80, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .edit_user .form_row img {
+  width: 16px;
+  height: 16px;
+}
+/* line 85, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .edit_user .button_row {
+  margin-top: 30px;
+}
+/* line 89, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .edit_user .password_row {
+  margin-top: 20px;
+}
+/* line 91, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .edit_user .password_row label {
+  width: 170px;
+}
+/* line 99, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection #insertCode .coderow {
+  text-align: center;
+  margin: 10px 0 20px 0;
+}
+/* line 103, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection #insertCode input {
+  padding: 10px;
+  font-size: 20px;
+}
+/* line 107, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection #insertCode ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  font-style: italic;
+  opacity: 0.5;
+}
+/* line 113, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection #walletContainer {
+  width: 600px;
+}
+/* line 115, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection #walletContainer .row-100 {
+  margin-bottom: 30px;
+}
+/* line 118, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection #walletContainer .walletBorderRow {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #000;
+}
+/* line 122, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection #walletContainer p.inline-errors {
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0 0 0 50px;
+}
+/* line 128, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .walletFont {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 700;
+}
+/* line 132, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .walletFont p {
+  margin: 0 0 0 50px;
+}
+/* line 135, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .walletFont p span {
+  color: #F2C53C;
+}
+/* line 138, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .walletFont p input {
+  margin-left: 60px;
+  height: 45px;
+  font-size: 40px;
+  color: #F2C53C;
+}
+/* line 148, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .walletFont .formButton {
+  font-size: 20px;
+  line-height: 20px;
+}
+/* line 153, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .fontExplanation {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+}
+/* line 157, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .fontExplanation p {
+  margin: 10px 0px;
+}
+/* line 162, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .hist_bids_row {
+  float: left;
+  margin-bottom: 20px;
+}
+/* line 166, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection h2 {
+  margin: 10px 0;
+  float: left;
+}
+/* line 170, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .historyBidBox {
+  float: left;
+}
+/* line 173, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .historyBidBox p {
+  color: #f2c53c;
+  margin: 2px 0;
+}
+/* line 177, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .historyBidBox .bidBox {
+  border: 2px solid #000;
+  height: 200px;
+  width: 300px;
+  margin-right: 10px;
+  position: relative;
+}
+/* line 183, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .historyBidBox .bidBox .payButton {
+  position: absolute;
+  left: 72px;
+  top: 65px;
+  padding: 15px 25px;
+  font-size: 30px;
+  line-height: 30px;
+}
+/* line 191, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .historyBidBox .bidBox .confirmButton {
+  position: absolute;
+  left: 65px;
+  top: 45px;
+  padding: 10px 20px;
+  font-size: 15px;
+  line-height: 15px;
+}
+/* line 199, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .historyBidBox .bidBox .confirmButton:last-child {
+  top: 85px;
+  left: 32px;
+}
+/* line 204, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .historyBidBox .bidBox .bidQuantity {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #DA8B03;
+}
+/* line 212, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .historyBidBox .bidBox .bidPosition {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  height: 50px;
+  width: 53px;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: 300;
+  color: #000;
+  background: url(theme/wrapper/star.png) bottom right no-repeat;
+}
+/* line 225, ../../app/assets/stylesheets/users.css.scss */
+#UserWrapper #detailsSection .historyBidBox .bidBox .firstPosition {
+  height: 45px;
+  width: 43px;
+  line-height: 25px;
+  background: url(theme/wrapper/trophy.png) bottom right no-repeat;
+}
+
+/* line 238, ../../app/assets/stylesheets/users.css.scss */
+#UserRegister {
+  width: 700px;
+  margin: 0px auto;
+}
+/* line 243, ../../app/assets/stylesheets/users.css.scss */
+#UserRegister h2 {
+  margin: 10px 0 25px 0;
+  width: 100%;
+  float: left;
+}
+/* line 249, ../../app/assets/stylesheets/users.css.scss */
+#UserRegister #new_user {
+  width: 450px;
+  margin: 10px auto 10px auto;
+}
+/* line 252, ../../app/assets/stylesheets/users.css.scss */
+#UserRegister #new_user .form_row {
+  margin: 5px 0;
+  float: left;
+}
+/* line 255, ../../app/assets/stylesheets/users.css.scss */
+#UserRegister #new_user .form_row label {
+  float: left;
+  width: 180px;
+}
+/* line 259, ../../app/assets/stylesheets/users.css.scss */
+#UserRegister #new_user .form_row .form_row_value {
+  float: left;
+  width: 270px;
+}
+/* line 262, ../../app/assets/stylesheets/users.css.scss */
+#UserRegister #new_user .form_row .form_row_value input {
+  width: 200px;
+}
+/* line 265, ../../app/assets/stylesheets/users.css.scss */
+#UserRegister #new_user .form_row .form_row_value input[type='checkbox'] {
+  width: 16px;
+}
+/* line 268, ../../app/assets/stylesheets/users.css.scss */
+#UserRegister #new_user .form_row .form_row_value select {
+  width: 205px;
+}
+/* line 273, ../../app/assets/stylesheets/users.css.scss */
+#UserRegister #new_user .button_row {
+  text-align: center;
+  float: left;
+  margin-top: 30px;
+}
+/* line 278, ../../app/assets/stylesheets/users.css.scss */
+#UserRegister #new_user .button_row .formButton {
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 50px;
+}
+/* line 286, ../../app/assets/stylesheets/users.css.scss */
+#UserRegister #RemindPassword {
+  width: 550px;
+  margin: 10px auto 10px auto;
+}
+/* line 289, ../../app/assets/stylesheets/users.css.scss */
+#UserRegister #RemindPassword .alertBox {
+  width: 404px;
+  margin: 15px 0 15px 72px;
+}
+/* line 293, ../../app/assets/stylesheets/users.css.scss */
+#UserRegister #RemindPassword h2 {
+  text-align: center;
+}
+/* line 296, ../../app/assets/stylesheets/users.css.scss */
+#UserRegister #RemindPassword .row-100 {
+  text-align: center;
+}
+/* line 299, ../../app/assets/stylesheets/users.css.scss */
+#UserRegister #RemindPassword .button_row {
+  text-align: center;
+  float: left;
+  margin-top: 15px;
+}
+/* line 304, ../../app/assets/stylesheets/users.css.scss */
+#UserRegister #RemindPassword .button_row .formButton {
+  padding: 5px 15px;
+  font-size: 15px;
+  line-height: 50px;
+}
+/* line 311, ../../app/assets/stylesheets/users.css.scss */
+#UserRegister #RemindPassword input {
+  width: 400px;
+  font-size: 20px;
+}
+/*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
+
+.fancybox-wrap,
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner,
+.fancybox-image,
+.fancybox-wrap iframe,
+.fancybox-wrap object,
+.fancybox-nav,
+.fancybox-nav span,
+.fancybox-tmp
+{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	vertical-align: top;
+}
+
+.fancybox-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8020;
+}
+
+.fancybox-skin {
+	position: relative;
+	background: #f9f9f9;
+	color: #444;
+	text-shadow: none;
+	-webkit-border-radius: 4px;
+	   -moz-border-radius: 4px;
+	        border-radius: 4px;
+}
+
+.fancybox-opened {
+	z-index: 8030;
+}
+
+.fancybox-opened .fancybox-skin {
+	-webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+	   -moz-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+	        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.fancybox-outer, .fancybox-inner {
+	position: relative;
+}
+
+.fancybox-inner {
+	overflow: hidden;
+}
+
+.fancybox-type-iframe .fancybox-inner {
+	-webkit-overflow-scrolling: touch;
+}
+
+.fancybox-error {
+	color: #444;
+	font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin: 0;
+	padding: 15px;
+	white-space: nowrap;
+}
+
+.fancybox-image, .fancybox-iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.fancybox-image {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+	background-image: url('../img/fancybox/fancybox_sprite.png');
+}
+
+#fancybox-loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -22px;
+	margin-left: -22px;
+	background-position: 0 -108px;
+	opacity: 0.8;
+	cursor: pointer;
+	z-index: 8060;
+}
+
+#fancybox-loading div {
+	width: 44px;
+	height: 44px;
+	background: url('../img/fancybox/fancybox_loading.gif') center center no-repeat;
+}
+
+.fancybox-close {
+	position: absolute;
+	top: -18px;
+	right: -18px;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+	z-index: 8040;
+}
+
+.fancybox-nav {
+	position: absolute;
+	top: 0;
+	width: 40%;
+	height: 100%;
+	cursor: pointer;
+	text-decoration: none;
+	background: transparent url('../img/fancybox/blank.gif'); /* helps IE */
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	z-index: 8040;
+}
+
+.fancybox-prev {
+	left: 0;
+}
+
+.fancybox-next {
+	right: 0;
+}
+
+.fancybox-nav span {
+	position: absolute;
+	top: 50%;
+	width: 36px;
+	height: 34px;
+	margin-top: -18px;
+	cursor: pointer;
+	z-index: 8040;
+	visibility: hidden;
+}
+
+.fancybox-prev span {
+	left: 10px;
+	background-position: 0 -36px;
+}
+
+.fancybox-next span {
+	right: 10px;
+	background-position: 0 -72px;
+}
+
+.fancybox-nav:hover span {
+	visibility: visible;
+}
+
+.fancybox-tmp {
+	position: absolute;
+	top: -99999px;
+	left: -99999px;
+	visibility: hidden;
+	max-width: 99999px;
+	max-height: 99999px;
+	overflow: visible !important;
+}
+
+/* Overlay helper */
+
+.fancybox-lock {
+    overflow: hidden !important;
+    width: auto;
+}
+
+.fancybox-lock body {
+    overflow: hidden !important;
+}
+
+.fancybox-lock-test {
+    overflow-y: hidden !important;
+}
+
+.fancybox-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	display: none;
+	z-index: 8010;
+	background: url('../img/fancybox/fancybox_overlay.png');
+}
+
+.fancybox-overlay-fixed {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+.fancybox-lock .fancybox-overlay {
+	overflow: auto;
+	overflow-y: scroll;
+}
+
+/* Title helper */
+
+.fancybox-title {
+	visibility: hidden;
+	font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	position: relative;
+	text-shadow: none;
+	z-index: 8050;
+}
+
+.fancybox-opened .fancybox-title {
+	visibility: visible;
+}
+
+.fancybox-title-float-wrap {
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	margin-bottom: -35px;
+	z-index: 8050;
+	text-align: center;
+}
+
+.fancybox-title-float-wrap .child {
+	display: inline-block;
+	margin-right: -100%;
+	padding: 2px 20px;
+	background: transparent; /* Fallback for web browsers that doesn't support RGBa */
+	background: rgba(0, 0, 0, 0.8);
+	-webkit-border-radius: 15px;
+	   -moz-border-radius: 15px;
+	        border-radius: 15px;
+	text-shadow: 0 1px 2px #222;
+	color: #FFF;
+	font-weight: bold;
+	line-height: 24px;
+	white-space: nowrap;
+}
+
+.fancybox-title-outside-wrap {
+	position: relative;
+	margin-top: 10px;
+	color: #fff;
+}
+
+.fancybox-title-inside-wrap {
+	padding-top: 10px;
+}
+
+.fancybox-title-over-wrap {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	padding: 10px;
+	background: #000;
+	background: rgba(0, 0, 0, .8);
+}
+
+/*Retina graphics!*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	   only screen and (min--moz-device-pixel-ratio: 1.5),
+	   only screen and (min-device-pixel-ratio: 1.5){
+
+	#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+		background-image: url('../img/fancybox/fancybox_sprite@2x.png');
+		background-size: 44px 152px; /*The size of the normal image, half the size of the hi-res image*/
+	}
+
+	#fancybox-loading div {
+		background-image: url('../img/fancybox/fancybox_loading@2x.gif');
+		background-size: 24px 24px; /*The size of the normal image, half the size of the hi-res image*/
+	}
+}
+@media screen and (max-width: 1000px) {
+  /* line 3, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive .container {
+    width: 658px;
+  }
+  /* line 6, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive .out-container {
+    width: 690px;
+  }
+  /* line 11, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content {
+    width: 628px;
+    padding: 50px 10px;
+    position: relative;
+    float: left;
+  }
+  /* line 17, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content .row .part66 {
+    margin-left: 6px;
+  }
+  /* line 20, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content .row .part33 {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  /* line 24, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content .row .part33.everytree {
+    margin-left: 6px;
+  }
+  /* line 27, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content .row .part33:first-child {
+    margin-left: 0px;
+  }
+  /* line 33, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content #infoContainer .infoBox:last-child {
+    margin-left: 157px;
+    margin-top: 20px;
+  }
+  /* line 38, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content #left_bid_container {
+    margin-top: 130px;
+    margin-left: 27.5px;
+    min-height: 0px;
+    margin-bottom: 50px;
+  }
+  /* line 43, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content #left_bid_container #bid_action_container {
+    min-height: 0px;
+  }
+  /* line 47, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content #right_bid_container {
+    float: left;
+    width: 513px;
+    margin-left: 47.5px;
+  }
+  /* line 51, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content #right_bid_container #product_description {
+    width: 513px;
+  }
+  /* line 54, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content #right_bid_container #product_description .product_section_container a {
+    width: 500px;
+  }
+  /* line 59, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content #right_bid_container #actualBidInfo {
+    position: absolute;
+    margin-left: 47.5px;
+    top: 20px;
+    left: 25px;
+    width: 513px;
+    float: none;
+  }
+  /* line 66, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content #right_bid_container #actualBidInfo .bidInfoItem {
+    width: 160px;
+  }
+  /* line 69, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content #right_bid_container #actualBidInfo #InfoBidsUser {
+    width: 493px;
+  }
+  /* line 74, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content #UserWrapper {
+    width: 608px;
+  }
+  /* line 76, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content #UserWrapper #detailsSection {
+    width: 370px;
+  }
+  /* line 78, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content #UserWrapper #detailsSection .detailsContainer {
+    margin-left: 20px;
+    width: 360px;
+  }
+  /* line 81, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content #UserWrapper #detailsSection .detailsContainer #walletContainer {
+    width: 360px;
+  }
+  /* line 83, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content #UserWrapper #detailsSection .detailsContainer #walletContainer .walletFont {
+    font-size: 28px;
+  }
+  /* line 85, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content #UserWrapper #detailsSection .detailsContainer #walletContainer .walletFont p {
+    margin-left: 25px;
+  }
+  /* line 87, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content #UserWrapper #detailsSection .detailsContainer #walletContainer .walletFont p input {
+    margin-left: 20px;
+  }
+  /* line 91, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content #UserWrapper #detailsSection .detailsContainer #walletContainer .walletFont p.inline-errors {
+    font-size: 12px;
+  }
+  /* line 95, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #wrapper #wrapper-container #wrapper-content #UserWrapper #detailsSection .detailsContainer #walletContainer .walletFont {
+    font-size: 20px;
+  }
+  /* line 108, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #headerContainer #header #header-central #logo {
+    width: 185px;
+  }
+  /* line 111, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #headerContainer #header #header-central #logo a img {
+    width: 200px;
+    margin-top: 15px;
+  }
+  /* line 117, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #headerContainer #header #header-central #header-content {
+    width: 473px;
+  }
+  /* line 121, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #headerContainer #header #header-central #header-content #header-top-links ul li {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  /* line 125, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #headerContainer #header #header-central #header-content #header-top-links ul li a img {
+    display: inline;
+  }
+  /* line 128, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #headerContainer #header #header-central #header-content #header-top-links ul li a span {
+    display: none;
+  }
+  /* line 135, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #headerContainer #header #header-central #header-content #header-bottom-links {
+    height: 52px;
+  }
+  /* line 137, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #headerContainer #header #header-central #header-content #header-bottom-links ul#secureList {
+    margin-left: 0px;
+    height: 26px;
+  }
+  /* line 140, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #headerContainer #header #header-central #header-content #header-bottom-links ul#secureList li {
+    margin-right: 5px;
+  }
+  /* line 143, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #headerContainer #header #header-central #header-content #header-bottom-links ul#secureList li#secureDispatch {
+    padding-left: 35px;
+  }
+  /* line 146, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #headerContainer #header #header-central #header-content #header-bottom-links ul#secureList li#secureMoney {
+    padding-left: 27px;
+  }
+  /* line 149, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #headerContainer #header #header-central #header-content #header-bottom-links ul#secureList li#secureGeneral {
+    padding-left: 40px;
+  }
+  /* line 153, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #headerContainer #header #header-central #header-content #header-bottom-links ul#socialList {
+    height: 26px;
+  }
+  /* line 165, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #footerContainer {
+    font-size: 12.4px;
+    height: 72px;
+  }
+  /* line 170, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #footerContainer #footer #footer-central ul {
+    float: left;
+    margin: 12px auto 0 2px;
+  }
+  /* line 173, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #footerContainer #footer #footer-central ul li {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  /* line 178, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #footerContainer #footer #footer-central ul img {
+    height: 13px;
+  }
+  /* line 183, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main.responsive #footerContainer #footer #footer-central p {
+    float: left;
+    display: inline;
+  }
+
+  /* line 192, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main #footerContainer {
+    height: 92px;
+  }
+  /* line 196, ../../app/assets/stylesheets/responsive.css.scss */
+  body#main #footerContainer #footer #footer-central p {
+    float: left;
+    display: inline;
+  }
+}
+/* line 13, ../../app/assets/stylesheets/ie8.css.scss */
+body#main #wrapper #wrapper-container #wrapper-content #ie8 .row .part33 .bid .article_description .maxPriceBox {
+  font-size: 9px;
+}
+/* line 15, ../../app/assets/stylesheets/ie8.css.scss */
+body#main #wrapper #wrapper-container #wrapper-content #ie8 .row .part33 .bid .article_description .maxPriceBox .maxPrice {
+  font-size: 20px;
+}
+/* line 28, ../../app/assets/stylesheets/ie8.css.scss */
+body#main #wrapper #wrapper-container #wrapper-content #ie8 #left_bid_container #bid_action_container {
+  min-height: 0px;
+}
+/* line 30, ../../app/assets/stylesheets/ie8.css.scss */
+body#main #wrapper #wrapper-container #wrapper-content #ie8 #left_bid_container #bid_action_container #time_container {
+  font-size: 55px;
+}
+/* line 34, ../../app/assets/stylesheets/ie8.css.scss */
+body#main #wrapper #wrapper-container #wrapper-content #ie8 #left_bid_container #bidSelector {
+  font-size: 23px;
+}

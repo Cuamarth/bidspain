@@ -1,0 +1,12 @@
+	<input type="hidden" name="MerchantID" value="<%=Rails.configuration.ceca_merchantID %>">	
+	<input type="hidden" name="AcquirerBIN" value="<%=Rails.configuration.ceca_acquirerBIN %>">
+	<input type="hidden" name="TerminalID" value="<%=Rails.configuration.ceca_terminalID %>">	
+	<input type="hidden" id="Num_operacion_CECA"  name="Num_operacion" value="">	
+	<input type="hidden" id="Importe_CECA" name="Importe" value="10">
+	<input type="hidden" name="TipoMoneda" value="978">
+	<input type="hidden" name="Exponente" value="2">
+	<input type="hidden" name="URL_OK"  value="<%=Rails.configuration.pay_callback_url%>">
+	<input type="hidden" name="URL_NOK"  value="<%=Rails.configuration.pay_callback_url%>">
+	<input type="hidden" name="Firma" value="<%=@PayOrder.creatececasign%>">
+	<input type="hidden" name="Cifrado" value="SHA1">
+	<input type="hidden" name="Pago_soportado"  value="SSL">

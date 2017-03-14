@@ -1,0 +1,165 @@
+
+
+<div id="NoProductSelected" class="blank_slate_container <%= (@subasta.product!=nil)? "hide":"" %>">
+     <span class="blank_slate"><a href="/admin/productos/available_products#available_products_list" class="fancyAjax">Elija un producto </a></span>
+</div>
+<div class="form_container <%= (@subasta.product==nil)? "hide":"" %>">
+	<%= form_for @subasta,url: "/admin/subasta/#{@subasta.id}" do |f| %>
+	<%=f.hidden_field :product_id%>
+		
+		<fieldset class="inputs">
+			<legend><span>Datos del producto</span></legend>
+		        <div class="form-row">
+		        	<a class="fancyImage img_thumbnail" href="<%= if @subasta.product!=nil then  @subasta.product.image_url.url end %>"> 
+		        		<img  src="<%= if @subasta.product!=nil then  @subasta.product.image_url.url(:thumb) end %> "/>
+		        	</a>
+		        	<div id="product_data">
+		        		<div id="title" class="row">
+		        			 <%= if @subasta.product!=nil then  @subasta.product.title end %>        			 
+		        		</div>
+		        		<div id="description" class="row">
+		        			 <%= if @subasta.product!=nil then  simple_format(@subasta.product.description[0..300]) end %>        			 
+		        		</div>		
+		        		<div id="changeProduct class="row">
+		        			 <a href="/admin/productos/available_products#available_products_list" class="fancyAjax">Elija otro</a>      			 
+		        		</div>	
+		        			
+		        	</div>
+		    		
+		    
+		        	
+		       </div>
+	
+			
+		
+		</fieldset>
+		<fieldset class="inputs">
+			<legend><span>Datos de la puja</span></legend>	
+			<div class="form_left">
+	
+		        <div class="form-row">
+		        	<div class="part3px">
+						 <label>Valor en dinero Bidspain</label>
+		    			 <%= f.text_field :price,:size => "20" %>
+		    			 <%if @subasta.errors[:price]%>
+		    				<p class="inline-errors"> <%=@subasta.errors[:price][0]%></p>
+		    			 <%end%>
+	    			</div>
+	    			<div class="part3px">
+						 <label>Precio máximo </label>
+		    			 <%= f.text_field :maxbid,:size =>"20" %>
+		    			 <%if @subasta.errors[:maxbid]%>
+		    				<p class="inline-errors"> <%=@subasta.errors[:maxbid][0]%></p>
+		    			 <%end%>
+	    			</div>
+	    		</div>
+				<div class="form-row">
+	    			<div class="part3px">
+	   					 <label>Número de pujas</label>
+		    			 <%= f.text_field :nbids_max,:size =>"20" %>
+		    			 <%if @subasta.errors[:nbids_max]%>
+		    				<p class="inline-errors"> <%=@subasta.errors[:nbids_max][0]%></p>
+		    			 <%end%>
+	    			</div>
+	    			<div class="part3px">
+	   					 <label>Coste de cada puja</label>
+		    			 <%= f.text_field :cost_per_bid,:size =>"20" %>
+		    			 <%if @subasta.errors[:cost_per_bid]%>
+		    				<p class="inline-errors"> <%=@subasta.errors[:cost_per_bid][0]%></p>
+		    			 <%end%>
+	    			</div>
+		        </div>		
+		        <div class="form-row">
+		        	<div class="part3px">
+						 <label>Tiempo  de puja</label> 
+		    			 <p class="time_selector"><%= f.time_select  :firstBidTime ,minute_step: 15, prompt: {hour: 'Horas', minute: 'Minutos'} %></p>
+	    			</div>
+	    			<div class="part3px">
+						 <label>Se renueva automaticamente por..</label> 
+		    			 <p class="time_selector"><%= f.time_select  :renewalTime ,minute_step: 15, prompt: {hour: 'Horas', minute: 'Minutos'} %></p>
+	    			</div>
+		        </div>	
+				<div class="form-row">
+	    			<div class="part3px">
+	   					 <label>Puja activa </label>
+		    			 <%= f.check_box :active %>
+	    			</div>
+	    			<div class="part3px">
+	   					 <label>Puja autorenovable</label>
+		    			 <%= f.check_box :autorenewal %>
+	    			</div>
+		        </div>	
+		        <%if @subasta.id!=nil%>
+		       	<div class="form-row">
+	    			<div class="part3px">
+	   					 <label>Puja cerrada </label>
+		    			 <%= f.check_box :closed %>
+	    			</div>
+	    			<div class="part3px">
+	   					 <label>Puja pagada</label>
+		    			 <%= f.check_box :paid %>
+	    			</div>
+		        </div>
+		        	<%if @subasta.closed %>
+			        <div class="form-row">
+		    			<div class="part3px">
+		   					 <label>Ganador de la puja</label>
+			    			 <%= f.text_field :userwiner,:size =>"20" %>
+			    			 <%if @subasta.errors[:userwiner]%>
+			    				<p class="inline-errors"> <%=@subasta.errors[:userwiner][0]%></p>
+			    			 <%end%>
+		    			</div>
+			        </div>	
+			        <%end%>
+		        <%end%>	
+		        
+
+			</div>
+			<div class="form_right">
+				<div class="form-row">
+					 <label>Lugar de la puja </label>
+		    		  <%= f.text_field :place,:size =>"20" %>
+		    		  <%if @subasta.errors[:place]%>
+		    			<p class="inline-errors"> <%=@subasta.errors[:place][0]%></p>
+		    		  <%end%>
+	    		</div>
+	    		<div id ="placeSelectorContainer"class="form-row">
+		    		<table id="placeSelector">
+		    			<tr>	    				
+		    				<td class="<%=(@subasta.getPlaces[1].bid_id>0)? "ocuppied":"free"%>" colspan="2"><a href="" data-id="1">1</a></td>
+		    				<td class="<%=(@subasta.getPlaces[2].bid_id>0)? "ocuppied":"free"%>" colspan="1"><a href="" data-id="2">2</a></td>	    				
+		    			</tr>
+		    			<% @subasta.getPlaces.drop(3).each_slice(3)  do |rowPlaces| %>
+		    				<tr>
+		    				<%rowPlaces.each do |place|%>
+		    					<td class="<%=(place.bid_id>0)? "ocuppied":"free"%>" colspan="1"><a href="" data-id="<%=place.nplace%>"><%=place.nplace%></a></td>		
+		    				<%end%>
+							</tr>
+						<% end %>		
+		    		</table>	
+		    	</div>
+				
+			</div>
+		</fieldset>
+		<fieldset class="actions">
+			<ol>
+				<li id="puja_submit_action" class="action input_action ">
+					<input type="submit" value="Guardar Subasta" name="commit">
+				</li>
+				<li class="cancel">
+					<a href="/admin/subasta">Cancelar</a>
+				</li>
+				<%if @subasta.closed and @subasta.paid%>
+					<li class="cancel">
+						<a href="/admin/subasta/<%=@subasta.id%>/finalizar">Finalizar Subasta</a>
+					</li>
+				<%end%>
+			</ol>
+		</fieldset>
+	
+	<%end%>
+
+</div>
+
+
+

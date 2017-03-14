@@ -1,0 +1,12 @@
+$('.alertBox').addClass("hide");
+<%if @errors!=nil and @errors.any?%>
+	$('#errorBox').removeClass("hide");
+	$('#errorBox p').html("<%=simple_format(I18n.t @errors[:code][0])%>");
+<%else%>	
+	$('#successBox').removeClass("hide");
+	$('#successBox p').html('<%=I18n.t "bidspain.user.offercodeused"%>');
+	$("#userMoney").html(<%=@User.money%>+" €");
+	$("#freeBidsUpperCount .redCounter").html(<%=@User.freebids%>);				
+	$("#halfBidsUpperCount .redCounter").html(<%=@User.halfbids%>);
+	$(".bidSpark").effect( "highlight","slow");	
+<%end%>

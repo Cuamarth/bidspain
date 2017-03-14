@@ -1,0 +1,49 @@
+<div id="UserWrapper">
+	<%=render partial: "user_section"%>
+	
+
+	<div id="detailsSection" >
+
+		<div class="detailsContainer ">
+			<%= form_for @PayOrder, remote: true,url: "/user/confirmpay",:html => { :id => "walletContainer" }  do |f| %>
+				<div  class="row-100 walletFont walletBorderRow">
+					<p><%=I18n.t "bidspain.wallet.actualwallet"%> : <span><%=@User.money%>€</span></p>
+				</div>
+				<div  class="row-100 walletFont ">
+					<p><%=I18n.t "bidspain.wallet.charge"%> : <input type="text"  name="payorder[money]" size="2" maxlength="4" value="<%=@PayOrder.money%>"/> <span>€</span></p>
+		   				<p  id="moneyError" class="inline-errors hide"></p>
+				</div>
+				<div class="row-100 walletBorderRow">
+					<p class="centered">
+					   <input type="radio" name="payorder[paytype]" id="paypal" value="paypal" checked/>
+					   <label for="paypal"><%= image_tag "theme/wrapper/paypal.png",:alt=>"Pagar con paypal" %>	</label>					
+
+				   </p>
+				   
+		   				<p id="payTypeError" class="inline-errors "></p>
+				</div>
+				<div id="infoBox" class=" row-100 ">
+					<p> <%= image_tag "theme/info/info.png"%> <%=I18n.t "bidspain.wallet.paypaladvise"%>  .</p>
+				</div>
+				
+				<div class="row-100 buttonRow">
+					<p class="centered">
+						<a id="sendForm" class="formButton " href="#">Aceptar</a>
+					</p>
+				</div>
+			<%end%>
+
+				<div class="row-100 ">
+					<p class="centered">
+						<a href="#transferDetails" class="mailLink fancyText" ><%=I18n.t "bidspain.wallet.banktransferquestion"%></a>
+						<div id="transferDetails"  class="centered" style="display:none">
+							<%=simple_format(I18n.t "bidspain.wallet.banktransfer")%>
+							
+						</div>
+					</p>
+				</div>
+		</div>	
+		<form id="paypalpay" method="post" action="" target="_top" class=""></form>
+		<form id="cecapay" method="post" action="" class=""   ENCTYPE="application/x-www-form-urlencoded" ></form>
+	</div>
+</div>

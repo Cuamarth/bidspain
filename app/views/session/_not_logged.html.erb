@@ -1,0 +1,37 @@
+<li>
+	<a class="instrucciones" href="/instrucciones">
+		<span><%=I18n.t "bidspain.bids.header.instructions"%></span>
+		<%= image_tag "theme/header/info.png",:alt=> (I18n.t "bidspain.bids.header.instructions") %>		
+	</a>								
+</li>
+<li id="loginLinkLI">
+	
+	<a id="loginLink" href="#"><%=I18n.t "bidspain.common.enter"%></a>
+	<form id="loginForm" class="hide">
+		<div id="login-Sup"></div>	
+		<div id="loginContainer">
+			<div id="loginFields">
+				<div class="row-100">
+					<input type="text" size="20" maxlength="20" class="loginInput" id="username"  name="username" placeholder="<%=I18n.t "bidspain.user.user"%>">
+				</div>
+				<div class="row-100">
+					<input type="password"  id="userpassword" class="loginInput" name="userpassword" size="20" maxlength="20" placeholder="<%=I18n.t "bidspain.user.password"%>">
+				</div>
+				<div class="row-100 errorText hide">
+					<%=I18n.t "bidspain.user.failedlogin"%>
+				</div>											
+				<div class="row-100">
+					<a href="/user/remind_password"><%=I18n.t "bidspain.user.forgotpassword"%></a>
+				</div>
+			</div>
+			<div id="enterContainer" class="shardBG2 row-100">
+				<div id="enterBox" class=" row-100">
+					<a href="#"><%=I18n.t "bidspain.common.enter"%></a>
+				</div>
+			</div>	
+		</div>
+	</form>							
+</li>
+<li>
+	<a href="/user/register"><%=I18n.t "bidspain.user.register"%></a>								
+</li>    

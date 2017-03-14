@@ -1,0 +1,23 @@
+<div id="UserWrapper">
+	<%=render partial: "user_section"%>
+	
+
+	<div id="detailsSection" >
+
+		<div class="detailsContainer ">
+			<div id="walletContainer" class="explanation">
+				<div  class="row-100 walletFont walletBorderRow centered">
+					<p><%=I18n.t "bidspain.user.registerend"%> </p>
+				</div>
+				<div  class="row-100 walletFont fontExplanation  centered explanation">
+					<p><%=I18n.t "bidspain.user.welcomeuser1"%><strong><a href="/user/wallet" class="contentLink ultra-bold" ><%=I18n.t "bidspain.user.wallet"%></a></strong> <%=I18n.t "bidspain.user.welcomeuser2"%>
+					</p>    
+					<p><%=I18n.t "bidspain.user.welcomeuser3"%> <a class="mailLink" href=""><%=@User.mail%> </a> <%=I18n.t "bidspain.user.welcomeuser4"%></p>
+					<p><strong>"<%=I18n.t "bidspain.user.welcomeuser5"%>"</strong></p>
+				</div>			
+			</div>
+		
+
+		</div>	
+	</div>
+</div>

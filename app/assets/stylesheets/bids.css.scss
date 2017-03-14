@@ -1,0 +1,709 @@
+
+.row:first-child{
+  margin-top:0px; 
+}   
+.row{
+  float:left;          
+  margin-top:65px;
+  position:relative;
+
+  .part66{
+    width:614px;
+    float:left;
+    margin-bottom:60px;
+  }
+  .part33{
+    width:300px;
+    float:left;
+    margin-left:14px;
+    margin-bottom:60px;
+  }
+  .part33.everytree{
+    margin-left:0px;
+  }
+  .part33:first-child{
+    margin-left:0px;
+  }
+  .part50{
+    width:50%;
+    float:left;
+  }
+  .bid{
+    width:300px;
+    font-size:17px;
+    font-weight:600;   
+    height:248px;
+    border:1px solid #534e4e;
+    border-radius: 4px;
+    position:relative;
+    background-color:#FFF;
+    box-shadow: 5px 5px 3px #888;
+
+
+    
+    
+    .article_description{
+      height:48px;
+      background-color:#534e4e;
+      color:#FFF;
+      font-size:11px;
+
+      .bidsBox{
+        padding:0 5px 0 11px;
+        height:100%;
+        float:left;
+        height:40px;
+        margin-top:4px;
+        width:84px;
+        font-size:15px;
+        .bidsBoxNumber{
+          color:#ecc13d;
+          margin-left:5px;
+          font-size:15px;
+        }
+      }
+      .bidsLeftBox{
+        border-left:1px solid  #FFF;    
+      }
+
+      .maxPriceBox{
+        height:100%;
+        float:right;
+        width:85px;
+        padding:0 5px;
+        height:40px;
+        margin-top:4px;         
+        border-left:1px solid  #FFF;
+        .maxPrice{
+          color:#ecc13d;
+          font-size:24px;
+        }
+      }
+    }
+    .article_content{
+      height:190px;
+      width:290px;
+      padding: 5px;
+      .bidTitle{
+        z-index:100;
+        position:relative;
+      }
+      .bigOffer,.bigProductTitle{
+        position:absolute;
+        background: url(theme/wrapper/specialTitleBG.png);
+        z-index:10;
+        left:10px;
+        top:150px;
+        width:250px;
+      }  
+      .bigProductTitle{
+       top:180px;
+       font-size:14px;         
+       line-height:15px;
+      } 
+      .bigOffer{
+        color:#3d1e6f;
+        font-size:26px;
+        line-height:26px;
+        height:35px;
+        font-weight:600;
+      } 
+      .product_img_container{
+        height:170px;
+        width:200px;
+        float:left;
+        text-align: center;
+        position:relative;
+        img.product_img_normal{
+          float:none;
+          left:0;
+          right:0;
+          top:0;
+          bottom:0;
+          position:absolute;
+          margin:auto auto;
+        }
+       }
+      .product_img_container.outlet{
+        height:190px;
+       } 
+      .time{
+        width:80px;
+        float:left;
+        z-index:100;
+        position:relative;
+        border-left:1px solid #534e4e;
+        p{
+          text-align:right;
+          font-size:28px;  
+          color:#da8b03;
+          span{
+            color:#414040;
+          }
+        }
+      }
+      .time.outlet{
+        p{
+          margin: 33px 0;
+        }
+      }
+      .overlay_actions{
+          position:absolute;
+          top:20px;
+          height:170px;
+          width:190px;
+          margin-right:10px;
+          float:left;
+          z-index:100;
+          .socialOverlayActions{
+            position:relative;
+            top:50px;
+            left:0px;
+            height:20px;
+            z-index:100;
+            text-align:center;
+            ul.bidSocialList{
+                margin-left:20px;                
+                height:100%;
+                li{
+                  margin-left:18px;
+                }
+                li:first-child{
+                  margin-left:18px;
+                }
+                a{
+                  color:transparent;
+                }  
+                
+            }
+          }
+          .goToBidContainer{
+            text-align:center;
+            position:relative;
+            top:60px;
+            left:0px;
+            height:40px;
+            opacity:1;
+            z-index:100;
+            a{
+              color:transparent;
+            }
+
+          }
+      }
+      .overlay_actions_closed{
+          position:absolute;
+          top:0px;
+          left:0px;
+          height:100%;
+          width:100%;          
+          z-index:100;
+          background-color:#DEDEDE;
+          opacity:0.8;
+
+
+          
+      }   
+             
+    }
+      .article_content_closed{
+        position:absolute;
+        z-index:200;
+        top:0;
+        left:0;
+        height:100%;
+        width:100%;   
+        background: url(theme/wrapper/closed.png) no-repeat top right;
+        .goToBidContainer{
+            text-align:center;
+            position:relative;
+            top:90px;
+            left:-10px;
+            height:40px;
+            opacity:1;
+            z-index:400;
+            border:none;
+
+            a{
+              position:relative;
+              z-index:500;
+              color:transparent;
+            }
+         }
+
+      }   
+       .article_content_overlay{
+        position:absolute;
+        z-index:20;
+        top:0;
+        left:0;
+        background-color:#DEDEDE;
+        opacity:0.55;
+
+      }
+      .article_description_overlay{
+        position:absolute;
+        top:200px;
+        left:0;
+        background-color:#DEDEDE;
+        z-index:20;
+        opacity:1;
+        p{
+          
+          text-align:center;          
+          margin:0px;
+          margin-top:12px;
+          a{      
+            font-size:20px;
+            span{
+              color:#2a5cc4;  
+            }  
+          }
+          a:hover{      
+            font-size:21px;
+            span{
+              color:#2a5cc4;  
+            }  
+          }
+        }
+      }
+
+    
+      
+  }
+   .bid_special{
+    width:614px;     
+      
+      .article_description{         
+          font-size:13px;
+          .bidsBox{     
+            padding: 10px 5px 0 17px;
+            height:30px;   
+            width:215px;
+            vertical-align:middle;
+            font-size:19px;
+            font-size:18px\9;
+            .bidsBoxNumber{
+              font-size:24px;
+              margin-left:10px;
+            }   
+          }
+          .maxPriceBox{     
+            width:114px;
+            text-align:center;
+          }
+        
+      }
+      .article_content{      
+        width:590px;      
+        z-index:1;  
+
+        .product_img_container{
+          height:190px;
+          width:484px;
+
+          img.product_img_normal{
+
+          }
+         }
+        .time{
+          width:104px;
+          z-index:100;
+          position:relative;
+          
+          p{
+                     
+            font-size:32px;
+               
+          }
+        }
+        .bigOffer,.bigProductTitle{
+          position:absolute;
+          background: url(theme/wrapper/specialTitleBG.png);
+          z-index:10;
+          left:10px;
+          top:130px;
+          width:450px;
+        }  
+        .bigProductTitle{
+         top:170px;
+         font-size:24px;         
+         line-height:25px;
+        } 
+        .bigOffer{
+          color:#2a5cc4;
+          font-size:36px;
+          line-height:30px;
+          height:40px;
+          font-weight:600;
+        } 
+        .overlay_actions{
+          float:none;
+          left:160px;
+          top:10px;
+        }          
+      }      
+      .article_content_closed{
+
+        .goToBidContainer{
+
+            top:90px;
+            left:0px;
+            height:40px;
+
+
+         }  
+       }
+      .article_content_overlay{
+        position:absolute;        
+        z-index:20;
+        width:605px;
+
+      }
+      
+  }
+}
+
+
+
+//Individual  BID //
+.bidDetails{
+  min-height:600px;
+  float:left;
+}
+#left_bid_container{
+  width:573px;
+  #bid_action_container{
+    width:513px;
+    min-height:600px;
+    margin:0px auto;
+    #time_container{
+      font-size:65px;
+      line-height:55px;
+      font-weight:600;
+      float:left;
+      width:100%;
+      p.closed{
+        width:100%;
+        text-align:center;
+        margin:0 0;
+      }
+      li{
+        margin-right:52px;
+        color:#DA8B03;
+        span{
+          color:#414040;
+        }
+      }
+      li:last-child{
+        margin-right:0px;
+      }
+    }
+   
+    #bidSelector{
+      margin:30px 0 20px 0;
+      float:left;
+      width:100%;
+      font-size:24px;     
+      line-height:32px;
+      ul{
+        li{
+          a{
+            color:#000;            
+            margin: 0 5px;          
+          }
+          a:hover{
+            color:#f2c53c;
+          }
+        }
+        li.arrowElement{
+          background:white;
+      
+          a{
+            margin:0px;
+            color:#fff;
+          }
+        }
+        li.dotted:after{          
+          content:"-";
+        }
+      }
+    }
+    
+    #actionBox{
+      float:left;
+      border:1px solid  #000;
+      height:80px;
+      #MaxPrice{
+        float:left;
+        width:110px;
+        color:#DA8B03;
+        height:75px;
+        font-size:30px;
+        line-height:30px;
+        font-weight:600;
+        text-align:center;
+        padding-top:5px;        
+        border-right:1px solid #000;
+      }
+      #InputMoneyContainer{
+        float:left;
+        width:166px;
+        padding:10px 27px;
+        height:60px;
+        border-right:1px solid #000;
+        .inputMoney{
+          height:100%;
+          width:50%;
+          float:left;
+          text-align:center;
+          input{
+           width:60px;          
+           height:30px;
+           font-size:20px;
+           text-align:right;
+          }
+        }
+        
+        
+      }
+      #bidButtonContainer{
+        float:left;
+        width:181px;
+        height:100%;
+        background-color:#534e4e;
+        text-align:center;
+        font-size:50px;
+        line-height:70px;
+        font-weight:600;
+        a{
+          color: #f2c53c;
+        }
+        a:hover{
+          color: #FFF;
+        }
+
+      }
+    }
+    #betsList{
+      margin-top:20px;
+      float:left;
+      font-size:15px;
+      line-height:12px;
+      font-weight:15px;
+      table{
+        border-spacing:0 1px;
+        width:100%;
+        tr{
+          margin:2px 0;
+          p{
+            margin:10px 0;
+          }
+          td.bet_id{
+            width:5%;
+            text-align:center;
+          }
+          td.bet_status{
+            width:15%;
+
+          }
+          td.bet_place{
+            width:30%;
+           
+            img{
+              float:left;
+              width:24px;
+              height:24px;
+            }
+            span{
+              float:left;
+              margin:5px 0 5px 5px;
+            }
+          }
+          td.bet_username{
+            width:40%;
+            text-align:left;
+          }
+          td.bet_quantity{
+            width:10%;
+            
+          }
+        }
+        tr.userOwnBid.lastBid{
+          background-color:#D3F9D7 !important;
+        }
+        tr.userOwnBid{
+          font-weight:600;
+          font-size:16px;
+        }
+        tr.row-0{
+          background-color:#da8b03;
+        }
+        tr.row-1{
+          background-color:#ecc13d;
+        } 
+        tr.row-2{
+          background-color:#f4d77c;
+        }   
+      }
+    }
+    .pagination{
+      text-align:right;
+      a{
+        color: #DA8B03;
+       }
+      a:hover{
+        color: #F2C53C;
+      }
+    }
+  }
+  
+}
+#right_bid_container{
+  width:354px;
+  #actualBidInfo{
+    width:100%;
+    float:left;
+    background-color:#534e4e;
+    .bidInfoItem{
+      width:107px;
+      margin: 18px 0 13px 0;
+      padding: 5px 5px 10px 5px;
+      float:left;     
+      text-align:center; 
+      border-right:1px solid #FFF;
+      p{
+        font-size:20px;
+        color:#FFF;
+        margin:0px;
+        line-height:22px;
+      }
+      p.dataNumber{
+        font-size:30px;
+        margin:0;
+        margin-top:23px;
+        color:#f2c53c;
+      }
+     }
+     
+     #PrecioPuja{
+       border-right:none;
+       p.dataNumber{                 
+         color:#da8b03;
+       }
+     }
+    #InfoBidsUser{
+       width:334px;
+       margin: 0 5px;
+       padding:5px 5px 10px 5px;
+       border-top:1px solid #FFF;
+       float:left;
+       .userBidsPre{
+         width:16%;
+         float:left;
+         p{
+           margin:0;
+           color:#FFF;
+           font-size:18px;
+         }
+       }
+       .userBids{
+         width:42%;         
+         float:left;
+         p{
+           margin:0;
+           color:#FFF;
+           font-size:14px;
+           span{
+             font-size:18px;
+             margin-left:0px;
+             color:#f2c53c;
+           }
+         }
+       }
+       .userBids:last-child{
+           p{
+            margin-left:5px;
+           }
+       }
+    }
+  }
+  #product_description{
+    padding:20px 10px 0px 10px;
+    float:left;
+    width:334px;
+    h1{
+      margin: 0 0 20px 0;
+    }
+    ul#bidSocialShare{
+      margin: 0 0 20px 0;
+      float:left;
+      li{
+        margin: 0 10px 0 0;
+      } 
+    }
+    .img_container{
+      height:220px;
+      position:relative;
+    }
+    .product_section_container{
+      float:left;
+      border-top:1px solid #000;
+      border-bottom:1px solid #000;
+      padding:20px 0;
+      
+ 
+      a{
+      position:absolute;
+      height:220px;
+      width:320px;
+      margin-left:10px;
+      color:#fff;
+          img{
+            float:none;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            position:absolute;
+            margin:auto auto;
+         }
+      }
+      p.readMore{
+        text-align:right;
+        float:left;
+        a{
+          height:10px;
+          color:#1f639c;
+        }
+        a:hover{
+          font-weight:600;
+        }
+        
+      }
+    }
+    .lastWinners{
+      h3{   
+        font-size:20px;
+        img{
+          width:24px;
+          margin-right:15px;
+        }
+
+      }
+      ul{
+        list-style: none;
+        padding-left:5px;
+        li{
+          background: url(theme/wrapper/avatar.png) no-repeat bottom left ;
+          padding-left:30px;
+          line-height:24px;
+          height:24px;
+        }
+      }
+      width:100%;
+    }
+  }
+
+}
+

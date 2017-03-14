@@ -1,0 +1,30 @@
+$(".inline-errors").addClass("hide")
+<%if @errors!=nil and @errors.any?%>
+	
+	<%if @PayOrder.errors[:paytype].any?%>
+		$("#payTypeError").html("<%=I18n.t "bidspain.wallet.noselectedpayment"%> ")
+		$("#payTypeError").removeClass("hide")
+	<%end%>
+	<%if @PayOrder.errors[:money].any?%>
+		$("#moneyError").html("<%=I18n.t "bidspain.wallet.minimumpayment"%>")
+		$("#moneyError").removeClass("hide")
+	<%end%>
+<%else%>	
+	<%if @PayOrder.paytype=="paypal"%>
+		$("#paypalpay").html('<%=j render "paypal_form"%>')
+		$("#paypalpay").attr("action",'<%= Rails.configuration.paypal_url %>')
+		$("#paypalpay #ammount").val('<%=@PayOrder.money%>')
+		$("#paypalpay #item_name").val('<%=@PayOrder.money%> <%=I18n.t "bidspain.bids.bidspaincredits"%>')
+		$("#paypalpay #invoice").val('<%=@PayOrder.id%>')		
+		$("#paypalpay").submit();
+	<%else%>
+		$("#cecapay").html('<%=j render "ceca_form"%>')
+		$("#cecapay").attr("action",'<%= Rails.configuration.ceca_url %>')
+		$("#cecapay #Num_operacion_CECA").val('<%=@PayOrder.id%>')
+		$("#cecapay #Importe_CECA").val(<%=@PayOrder.cecamoney%>)		
+		$("#cecapay").submit();
+
+	
+	<%end%>
+	
+<%end%>

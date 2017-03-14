@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+  	<%=render partial: "emailer/email_header"%>
+    <h2><%=I18n.t "bidspain.mail.newuser1"%> <%=@user.fullName%>  </h2>
+    <table >
+    	<tr>
+    		<td>
+    			<%=I18n.t "bidspain.mail.newuser2"%> <%=@url%> . <%=I18n.t "bidspain.mail.newuser3"%> .
+    		</td>
+    	</tr>
+    	
+    </table>
+  </body>
+</html>

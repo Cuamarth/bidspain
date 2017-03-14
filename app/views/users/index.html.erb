@@ -1,0 +1,20 @@
+<div id="UserWrapper">
+	<%=render partial: "user_section"%>
+	
+
+	<div id="detailsSection" class='<%="errors_found" if @User.errors.any?%>'>
+
+		<div class="detailsContainer ">
+			<%if flash.notice %>
+				<div class="alertBox" id="successBox">		
+					&nbsp;&nbsp;<%=notice%> &nbsp;&nbsp;
+				</div>
+			<%end%>
+			<%=render partial: "user_form"%>
+			<div class="row-100  deleteAccountInfo">
+				<%=I18n.t "bidspain.user.deleteaccount"%>  <a class="mailLink" href="mailto:info@bidspain.com">info@bidspain.com</a>
+			</div>
+		</div>	
+	</div>
+</div>
+ 

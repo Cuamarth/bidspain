@@ -1,0 +1,61 @@
+<div id="infoContainer">
+
+	<h2 class="row-100"> <%=I18n.t "bidspain.static.info.title"%></h2>
+	
+	<div class="row-100">
+		<div class="infoBox">
+			<p><span class="capital">1</span>. <%=I18n.t "bidspain.static.info.box1.text1"%> </p>
+			<p class="centered"><%= image_tag "theme/info/prices.png",:alt=>(I18n.t "bidspain.static.info.box1.img1"),:title => (I18n.t "bidspain.static.info.box1.img1"),width: "290" %></p>
+			<p> <%=I18n.t "bidspain.static.info.box1.text2"%></p>
+			<p class="centered"><%= image_tag "theme/info/input.png",:alt=>(I18n.t "bidspain.static.info.box1.img2"),:title =>(I18n.t "bidspain.static.info.box1.img2") %></p>
+			<p><%=I18n.t "bidspain.static.info.box1.text3"%> </p>
+			<p class="centered"><%= image_tag "theme/info/bet.png",:alt=>(I18n.t "bidspain.static.info.box1.img3"),:title => (I18n.t "bidspain.static.info.box1.img3") %></p>
+		</div>
+		<div class="infoBox">
+			<p><span class="capital">2</span>.<%=I18n.t "bidspain.static.info.box2.text1"%>   </p>
+			<p class="centered"><%= image_tag "theme/info/list.png",:alt=>(I18n.t "bidspain.static.info.box2.img1"),:title => (I18n.t "bidspain.static.info.box2.img1")%></p>
+			<p><%=I18n.t "bidspain.static.info.box2.text2"%>  </p>
+			<p class="centered nobottomMargin"><%= image_tag "theme/info/timecount.png",:alt=>(I18n.t "bidspain.static.info.box2.img2"),:title => (I18n.t "bidspain.static.info.box2.img2"),width: "290" %></p>
+			<p class="centered finalImage"><%= image_tag "theme/info/leftbids.png",:alt=>(I18n.t "bidspain.static.info.box2.img2"),:title => (I18n.t "bidspain.static.info.box2.img2"),width: "300" %></p>
+			
+		</div>
+		<div class="infoBox">
+			<p class="centered"><%= image_tag "theme/info/winner.png",:alt=>(I18n.t "bidspain.static.info.box3.img1"),:title =>(I18n.t "bidspain.static.info.box3.img1"),height: "250" %></p>
+			<p class="especial"><%=I18n.t "bidspain.static.info.box3.text1"%></p>			
+		</div>
+	</div>
+	
+	<h2 class="row-100"> <%=I18n.t "bidspain.static.info.remember.title"%></h2>
+	
+	<div class="row-100">
+		<ul id="importantPoints">
+			<li>
+				<%=I18n.t "bidspain.static.info.remember.text1"%>				
+			</li>
+			<li>
+				<%=I18n.t "bidspain.static.info.remember.text2"%> 
+			</li>
+			<li>
+				<%=simple_format(I18n.t "bidspain.static.info.remember.text3")%> 
+			
+				<p class="centered">
+					<%= image_tag "theme/info/freehalfbids.png",:alt=>(I18n.t "bidspain.static.info.remember.img1"),:title => (I18n.t "bidspain.static.info.remember.img1") %>
+				</p>
+			</li>
+			<li>
+				<%=I18n.t "bidspain.static.info.remember.text4"%>  
+			</li>
+			<li>
+				<%=I18n.t "bidspain.static.info.remember.text5"%> :
+				<ul>
+					<li><%=simple_format(I18n.t "bidspain.static.info.remember.text6")%>  </li>
+					<li><%=simple_format(I18n.t "bidspain.static.info.remember.text7")%> </li>
+					<li><%=simple_format(I18n.t "bidspain.static.info.remember.text8")%> </li>
+				</ul>
+			</li>				
+		</ul>
+	</div>
+		
+</div>	
+
+

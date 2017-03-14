@@ -1,0 +1,16 @@
+
+	<li class="userLink">
+		<a class='<%="selected" if @selectedSection=="index"%>' href="/user"><%=I18n.t "bidspain.user.personaldata"%> </a>
+	</li>
+	<li class="userLink">
+		<a class='<%="selected" if @selectedSection=="password"%>' href="/user/password"><%=I18n.t "bidspain.user.changepassword"%></a>
+	</li>
+	<li class="userLink">
+		<a class='<%="selected" if @selectedSection=="bids"%>' href="/user/bids"><%=I18n.t "bidspain.user.mybids"%></a>
+	</li>
+	<li class="userLink">
+		<a  class='<%="selected" if @selectedSection=="wallet"%>' href="/user/wallet"><%=I18n.t "bidspain.user.wallet"%></a>
+	</li>
+	<li class="userLink">
+		<a class='<%="selected" if @selectedSection=="codes"%>' href="/user/codes"><%=I18n.t "bidspain.user.promotionalcodes"%></a>
+	</li>

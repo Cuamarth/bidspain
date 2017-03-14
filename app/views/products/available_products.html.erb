@@ -1,0 +1,24 @@
+
+
+<ul id="available_products_list">
+	<%@products.each do |product|%>
+		<li><a href="#"  data-id="<%=product.id%>"><%=product.title%></a></li>
+	<%end%>
+
+
+
+<ul>
+
+<script type="text/javascript">
+
+	$("#available_products_list a").on("click",function() {
+		
+		var url='/admin/productos/'+$(this).attr("data-id")+".json";
+		$.ajax({
+		url: url,
+		dataType: 'json',
+		success:add_product_to_bid
+		});
+	});
+	
+</script>	

@@ -1,0 +1,21 @@
+<div id="UserWrapper">
+	<%=render partial: "user_section"%>
+	
+
+	<div id="detailsSection" >
+
+		<div class="detailsContainer ">
+			<div id="walletContainer">
+				<div  class="row-100 walletFont walletBorderRow centered">
+					<p><%=I18n.t "bidspain.wallet.charged1"%> </p>
+				</div>
+				<div  class="row-100 walletFont fontExplanation  centered explanation">
+					<p><span><%=@PayOrder.money%> €</span> <%=I18n.t "bidspain.wallet.charged2"%> : <a class="mailLink" href="mailto:info@bidspain.com">info@bidspain.com</a>	
+					</p>    
+				</div>			
+			</div>
+		
+
+		</div>	
+	</div>
+</div>

@@ -1,0 +1,150 @@
+<%= form_for @User,url: "/user/register" do |f| %>
+<h2><%=I18n.t "bidspain.user.userdata"%>
+	<%= image_tag "theme/wrapper/help_icon.png",:alt=>(I18n.t "bidspain.user.userdatahelp"),:title =>(I18n.t "bidspain.user.userdatahelp"),:class =>"smallIcon" %>	
+</h2> 
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.mailaddress"%> :</label>
+	<div class="form_row_value">
+		<%= f.text_field :mail,:size =>"30",:class =>"value " %>
+		<%if @User.errors[:mail]%>
+			<p class="inline-errors value "> <%=@User.errors[:mail][0]%></p>
+		<%end%>		
+	</div>
+</div>
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.username"%> :</label>
+	<div class="form_row_value">
+		<%= f.text_field :username,:size =>"30",:class =>"value" %>
+		<%if @User.errors[:username]%>
+			<p class="inline-errors value "> <%=@User.errors[:username][0]%></p>
+		<%end%>		
+	</div>
+</div>
+<div class="form_row row-100 password_row" >	
+	<label><%=I18n.t "bidspain.user.password"%>  :</label>
+	<div class="form_row_value">
+		<%= f.password_field :newPassword,:size =>"30"%>
+		<%if @User.errors[:newPassword].any?%>
+			<div class="inline-errors value "> <%=simple_format(I18n.t @User.errors[:newPassword][0])%></div>
+		<%end%>		
+	</div>
+</div>
+<div class="form_row row-100 password_row">	
+	<label><%=I18n.t "bidspain.user.confirmpassword"%>:</label>
+	<div class="form_row_value">
+		<%= f.password_field :confirmPassword,:size =>"30" %>
+		<%if @User.errors[:confirmPassword].any?%>
+			<div class="inline-errors value "> <%=simple_format( I18n.t @User.errors[:confirmPassword][0])%></div>
+		<%end%>		
+	</div>
+</div>
+
+<h2><%=I18n.t "bidspain.user.personaldata"%>
+	<%= image_tag "theme/wrapper/help_icon.png",:alt=>(I18n.t "bidspain.user.personaldatadescription"),
+	:title => (I18n.t "bidspain.user.personaldatadescription"),:class =>"smallIcon" %>	
+</h2> 
+
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.name"%> :</label>
+	<div class="form_row_value">
+		<%= f.text_field :name,:size =>"30",:class =>"value" %>
+		<%if @User.errors[:name]%>
+			<p class="inline-errors value "> <%=@User.errors[:name][0]%></p>
+		<%end%>		
+	</div>
+</div>
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.lastname"%> :</label>
+	<div class="form_row_value">
+		<%= f.text_field :lastname,:size =>"30",:class =>"value " %>
+		<%if @User.errors[:lastname]%>
+			<p class="inline-errors value "> <%=@User.errors[:lastname][0]%></p>
+		<%end%>		
+	</div>
+</div>
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.sex"%> :</label>
+	<div class="form_row_value">
+		<%= select_tag 'user[sex]', options_for_select(User.getSexTypes,User.getSexTypes), class: 'value ' %>
+		<%if @User.errors[:sex]%>
+			<p class="inline-errors value "> <%=@User.errors[:sex][0]%></p>
+		<%end%>		
+	</div>
+</div>
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.address"%> :</label>
+	<div class="form_row_value">
+		<%= f.text_field :address,:size =>"30",:class =>"value " %>
+		<%if @User.errors[:address]%>
+			<p class="inline-errors value "> <%=@User.errors[:address][0]%></p>
+		<%end%>		
+	</div>
+</div>
+
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.zipcode"%> :</label>
+	<div class="form_row_value">
+		<%= f.text_field :zipcode,:size =>"30",:class =>"value " %>
+		<%if @User.errors[:zipcode]%>
+			<p class="inline-errors value "> <%=@User.errors[:zipcode][0]%></p>
+		<%end%>		
+	</div>
+</div>
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.city"%> :</label>
+	<div class="form_row_value">
+		<%= f.text_field :city,:size =>"30",:class =>"value " %>
+		<%if @User.errors[:city]%>
+			<p class="inline-errors value "> <%=@User.errors[:city][0]%></p>
+		<%end%>		
+	</div>
+</div>
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.state"%>  :</label>
+	<div class="form_row_value">
+		<%= select_tag 'user[state]', options_for_select(@provincias), class: 'value ' %>
+		<%if @User.errors[:state]%>
+			<p class="inline-errors value "> <%=@User.errors[:state][0]%></p>
+		<%end%>		
+	</div>
+</div>
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.country"%>  :</label>
+	<div class="form_row_value">
+		<div class="value "><%= country_select("user", "country",[ "Spain" ]) %></div>
+		<%if @User.errors[:country]%>
+			<p class="inline-errors value "> <%=@User.errors[:country][0]%></p>
+		<%end%>		
+	</div>
+</div>
+
+
+<h2><%=I18n.t "bidspain.user.confirmthat"%> : </h2> 
+
+<div class="form_row row-100">	
+	<label> <%=I18n.t "bidspain.user.acceptthat"%>  <a href="/docs/Terminos y Condiciones.pdf" target="_blank" class="mailLink"><%=I18n.t "bidspain.user.termsofuse"%></a></label>
+	<div class="form_row_value">
+		<div class="value toleft"><input id="terms_of_service" type="checkbox" value="1" name="user[terms_of_service]" <%= "checked" if @User.terms_of_service%>></div>
+		<%if @User.errors[:terms_of_service].any?%>
+			<div class="inline-errors value "> <%=simple_format(I18n.t @User.errors[:terms_of_service][0])%></div>
+		<%end%>		
+	</div>
+</div>
+
+<div class="form_row row-100">	
+	<label><%=I18n.t "bidspain.user.olderof18"%> </label>
+	<div class="form_row_value">
+		<div class="value toleft"><input id="older_enough" type="checkbox" value="1" name="user[older_enough]" <%= "checked" if @User.older_enough%>></div>
+		<%if @User.errors[:older_enough].any?%>
+			<p class="inline-errors value "> <%=I18n.t @User.errors[:older_enough][0]%></p>
+		<%end%>		
+	</div>
+</div>
+
+<div class="form_row button_row row-100">	
+	<a  id="sendForm"  class="registerUser formButton " href="#"><%=I18n.t "bidspain.user.register"%></a>
+</div>
+
+<%end%>
+
+
